@@ -13,7 +13,6 @@
 }
 
 .banner-left-parent{
-    /* border: 10px solid #1c2130; */
     border: 10px solid #231f20;
     width:  350px;
     height: 350px;
@@ -93,7 +92,37 @@ for mobile responsiveness
         margin: 0;
         padding: 0;
       }
+      .banner-div{
+        padding: 4rem 0 ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        min-height: 100vh;
+    }
+    .banner-left-parent{
+        border: 10px solid #231f20;
+        width:  300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* box-shadow:unset; */
+    }
+    .banner-left{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: url('https://i.ibb.co/6rBQWrX/user.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
       .banner-right{
         width: 90%;
     }
+
 }
