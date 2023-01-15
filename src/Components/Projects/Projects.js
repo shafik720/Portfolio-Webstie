@@ -24,7 +24,10 @@ const Projects = () => {
                             <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span>
                         </div>
                     </div>
-                    <div className="single-project-body"></div>
+                    <div className="single-project-body">
+                        <h2>Photographer's Website (Portfolio + E-commerce)</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error recusandae magnam illum placeat minima a eius iusto qui? Magnam facilis quas laboriosam mollitia minus quibusdam tempore fuga maiores, commodi ullam.</p>
+                    </div>
                     <div className="single-project-footer"></div>
                 </div>
             </div>

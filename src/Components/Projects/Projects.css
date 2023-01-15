@@ -24,3 +24,11 @@
 .project-header-left img{
     width: 40px;
 }
+
+
+.single-project-body{
+    margin-top: 20px;
+}
+.single-project-body h2{
+    font-size: 22px;
+}
