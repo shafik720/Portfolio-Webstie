@@ -8,7 +8,7 @@
 }
 .single-projects{
     border: 1px solid grey;
-    padding: 30px 20px;
+    padding: 30px 20px 15px 20px;
     border-radius: 10px;
 }
 .single-project-header{
@@ -31,4 +31,23 @@
 }
 .single-project-body h2{
     font-size: 22px;
+}
+
+
+.project-technology{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.project-technology span{
+    border: 3px solid #007ACC;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.project-technology span p{
+    margin: 0;
 }
