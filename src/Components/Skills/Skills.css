@@ -17,7 +17,7 @@
     margin: 30px auto;
     grid-template-columns: repeat(5,1fr);
     column-gap: 10px;
-    row-gap: 45px;
+    row-gap: 35px;
 }
 .skill-single-div{
    width: 70px;

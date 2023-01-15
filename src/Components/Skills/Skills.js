@@ -9,6 +9,9 @@ import firebase from '../../Utilities/img/logo/firebase.svg'
 import node from '../../Utilities/img/logo/node-js.svg'
 import express from '../../Utilities/img/logo/express.png'
 import mongoDb from '../../Utilities/img/logo/mongodb.png'
+import git from '../../Utilities/img/logo/github.svg'
+import vscode from '../../Utilities/img/logo/vs code.png'
+import api from '../../Utilities/img/logo/api.png'
 
 const Skills = () => {
     return (
@@ -53,6 +56,18 @@ const Skills = () => {
                 <div className="skill-single-div">
                     <img src={express} alt=""/>
                     <p>Express</p>
+                </div>
+                <div className="skill-single-div">
+                    <img src={git} alt=""/>
+                    <p>Github</p>
+                </div>
+                <div className="skill-single-div">
+                    <img src={vscode} alt=""/>
+                    <p>Vs Code</p>
+                </div>
+                <div className="skill-single-div">
+                    <img src={api} alt=""/>
+                    <p>Api</p>
                 </div>
             </div>
         </div>
