@@ -12,28 +12,30 @@ import projectLogo from '../../Utilities/img/folder.png';
 
 const Header = () => {
     const moveHeader= () => {
-        // document.querySelector('.header-div').classList.add('active');
+        document.querySelector('.header-div').classList.add('active');
+        // document.querySelector('.logo-text').classList.add('active');
     }
     const moveHeader2 = () =>{
-        // document.querySelector('.header-div').classList.remove('active');
+        document.querySelector('.header-div').classList.remove('active');
+        // document.querySelector('.logo-text').classList.remove('active');
     }
     return (
         <div onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
             <div className="logo-icon">
                 <img src={homeLogo} alt=""/>
-                <p>Home</p>
+                <p className="logo-text">Home</p>
             </div>
             <div className="logo-icon">
                 <img src={userLogo} alt=""/>
-                <p>About</p>
+                <p className="logo-text">About</p>
             </div>
             <div className="logo-icon">
                 <img src={skillLogo} alt=""/>
-                <p>Skills</p>
+                <p className="logo-text">Skills</p>
             </div>
             <div className="logo-icon">
                 <img src={projectLogo} alt=""/>
-                <p>Projects</p>
+                <p className="logo-text">Projects</p>
             </div>
         </div>
     );
