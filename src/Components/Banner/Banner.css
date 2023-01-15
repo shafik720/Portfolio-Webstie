@@ -69,16 +69,16 @@ banner right side
     /* border: 3px solid #231F20; */
     /* background: #facf0f; */
     background: white;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     position: relative;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-    border-radius: 5px;
-    border: 2px solid rgba(0,0,0,0.5);
+    /* box-shadow: 0 5px 10px rgba(0,0,0,0.5); */
+    border-radius: 3px;
+    border: 2px solid #231F20;
 }
 .social-single-icon img{
     width: 70%;
