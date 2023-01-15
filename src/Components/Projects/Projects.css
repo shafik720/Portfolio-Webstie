@@ -28,6 +28,9 @@
 .project-header-right a:first-child{
     color: black;
 }
+.project-header-right a:nth-child(2){
+    color: #00AF80;
+}
 .project-header-left img{
     width: 40px;
 }
