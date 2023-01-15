@@ -25,29 +25,31 @@ const Header = () => {
     useEffect(() => {
         if (isActive) {
             document.querySelector('.menubar-mobile').classList.add('active');
+            document.querySelector('.header-div').classList.add('mobile');
         } else {
             document.querySelector('.menubar-mobile').classList.remove('active');
+            document.querySelector('.header-div').classList.remove('mobile');
         }
     }, [isActive])
     return (
-        <div onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
-            <div onClick={() => setIsActive(!isActive)} className="menubar-mobile">
+        <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
+            <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
                 <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
                 <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
             </div>
-            <div className="logo-icon">
+            <div draggable className="logo-icon">
                 <img src={homeLogo} alt="" />
                 <p className="logo-text">Home</p>
             </div>
-            <div className="logo-icon">
+            <div draggable className="logo-icon">
                 <img src={userLogo} alt="" />
                 <p className="logo-text">About</p>
             </div>
-            <div className="logo-icon">
+            <div draggable className="logo-icon">
                 <img src={skillLogo} alt="" />
                 <p className="logo-text">Skills</p>
             </div>
-            <div className="logo-icon">
+            <div draggable className="logo-icon">
                 <img src={projectLogo} alt="" />
                 <p className="logo-text">Projects</p>
             </div>
