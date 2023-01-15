@@ -1,8 +1,13 @@
 
 
 .about-div{
-    margin-left: 50px;
-    padding: 4rem 0;
+    /* margin-left: 50px; */
+    padding: 4rem 2rem;
+    /* margin-top: 30px; */
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    width: 90%;
+    margin:  30px auto;
 }
 .about-header{
     display: flex;
@@ -18,4 +23,12 @@
     font-size: 45px;
     border-left: 5px solid crimson;
     padding-left: 5px;
+}
+.about-desc{
+    margin-top: 20px;
+}
+.about-desc p{
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 15px;
 }
