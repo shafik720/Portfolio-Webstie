@@ -9,3 +9,26 @@
 .skill-header h2{
     border-left: 5px solid #2BC48A;
 }
+
+
+.skill-single-div{
+    width: 70px;
+    height: 70px;
+    /* border: 2px solid grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.skill-single-div p{
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+.skill-single-div img{
+    width: 60%;
+}
