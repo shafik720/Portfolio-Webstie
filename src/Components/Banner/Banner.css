@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -31,11 +32,15 @@
 }
 .banner-left img{
     width: 105%;    
-    
-    /* height: 100%; */
 }
 
+/* -------------------------------- 
+banner right side 
+--------------------------------------*/
 .banner-right{
     width: 50%;
-    border: 2px solid;
+    /* border: 2px solid; */
+}
+.banner-right p, h2,h1 {
+    margin: 0;
 }

@@ -9,7 +9,8 @@ const Banner = () => {
             </div>
 
             <div className="banner-right">
-                <p>Hi <br/> I'm</p>
+                <p>Hi </p>
+                <h2>I'm</h2>
                 <h1>Shafiqul Hasan Russell</h1>
                 <p>A Front-End Web Developer passionate about creating interactive applications and experiences on the web.</p>
             </div>
