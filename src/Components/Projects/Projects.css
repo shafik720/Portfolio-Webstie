@@ -1,0 +1,26 @@
+
+
+
+.all-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 35px 0;
+}
+.single-projects{
+    border: 1px solid grey;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+.single-project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-header-right span{
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.project-header-left img{
+    width: 40px;
+}
