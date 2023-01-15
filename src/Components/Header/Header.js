@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import homeLogo from '../../Utilities/img/home.png';
 import userLogo from '../../Utilities/img/avatar.png';
@@ -11,30 +11,44 @@ import projectLogo from '../../Utilities/img/folder.png';
 
 
 const Header = () => {
-    const moveHeader= () => {
+    const moveHeader = () => {
         document.querySelector('.header-div').classList.add('active');
         // document.querySelector('.logo-text').classList.add('active');
     }
-    const moveHeader2 = () =>{
+    const moveHeader2 = () => {
         document.querySelector('.header-div').classList.remove('active');
         // document.querySelector('.logo-text').classList.remove('active');
     }
+
+    // toggling mobile menu icon
+    const [isActive, setIsActive] = useState(false);
+    useEffect(() => {
+        if (isActive) {
+            document.querySelector('.menubar-mobile').classList.add('active');
+        } else {
+            document.querySelector('.menubar-mobile').classList.remove('active');
+        }
+    }, [isActive])
     return (
         <div onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
+            <div onClick={() => setIsActive(!isActive)} className="menubar-mobile">
+                <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
+                <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
+            </div>
             <div className="logo-icon">
-                <img src={homeLogo} alt=""/>
+                <img src={homeLogo} alt="" />
                 <p className="logo-text">Home</p>
             </div>
             <div className="logo-icon">
-                <img src={userLogo} alt=""/>
+                <img src={userLogo} alt="" />
                 <p className="logo-text">About</p>
             </div>
             <div className="logo-icon">
-                <img src={skillLogo} alt=""/>
+                <img src={skillLogo} alt="" />
                 <p className="logo-text">Skills</p>
             </div>
             <div className="logo-icon">
-                <img src={projectLogo} alt=""/>
+                <img src={projectLogo} alt="" />
                 <p className="logo-text">Projects</p>
             </div>
         </div>
