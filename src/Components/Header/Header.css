@@ -89,6 +89,7 @@ for mobile responsiveness
     .header-div{
         width: 250px;
         left: -500px;
+        z-index: 9999;
     }
     .header-div.mobile{
         left: 0;
