@@ -20,7 +20,7 @@
 }
 
 
-.logo-icon{
+.logo-icon, .logo-icon a{
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -33,13 +33,17 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.logo-icon.active, .logo-icon a.active{
+    border: none;
+    text-decoration: none;
+}
 .logo-icon:hover{
     background: rgba(255, 255, 255, 0.137);
 }
 .logo-icon img{
     width: 30px;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 7px;
 }
 .logo-icon p{
     margin-bottom: 0;

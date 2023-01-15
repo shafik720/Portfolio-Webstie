@@ -8,6 +8,8 @@ import userLogo from '../../Utilities/img/avatar.png';
 import skillLogo from '../../Utilities/img/skill.png';
 import projectLogo from '../../Utilities/img/folder.png';
 
+import { Link, animateScroll as scroll } from "react-scroll";
+
 
 
 const Header = () => {
@@ -38,20 +40,57 @@ const Header = () => {
                 <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
             </div>
             <div draggable className="logo-icon">
-                <img src={homeLogo} alt="" />
-                <p className="logo-text">Home</p>
+                <Link
+                    activeClass="active"
+                    to="banner"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    <img src={homeLogo} alt="" />
+                    <p className="logo-text">Home</p>
+                </Link>
             </div>
             <div draggable className="logo-icon">
-                <img src={userLogo} alt="" />
-                <p className="logo-text">About</p>
+                <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    <img src={userLogo} alt="" />
+                    <p className="logo-text">About</p>
+                </Link>
             </div>
             <div draggable className="logo-icon">
-                <img src={skillLogo} alt="" />
-                <p className="logo-text">Skills</p>
+                <Link
+                    activeClass="active"
+                    to="skill"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                >
+                    <img src={skillLogo} alt="" />
+                    <p className="logo-text">Skills</p>
+                </Link>
+
             </div>
             <div draggable className="logo-icon">
-                <img src={projectLogo} alt="" />
-                <p className="logo-text">Projects</p>
+                <Link
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={300}
+                >
+                    <img src={projectLogo} alt="" />
+                    <p className="logo-text">Projects</p>
+                </Link>
             </div>
         </div>
     );

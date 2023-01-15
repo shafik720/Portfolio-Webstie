@@ -7,7 +7,7 @@ import linkedLogo from '../../Utilities/img/logo/likedin.svg';
 
 const Banner = () => {
     return (
-        <div className="banner-div">
+        <div id="banner" className="banner-div">
             <div className="banner-left-parent">
                 <div className="banner-left"></div>
             </div>

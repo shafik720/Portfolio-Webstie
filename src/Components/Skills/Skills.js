@@ -15,7 +15,7 @@ import api from '../../Utilities/img/logo/api.png'
 
 const Skills = () => {
     return (
-        <div className="skill-div">
+        <div id="skill" className="skill-div">
             <div className="about-header skill-header">
                 <p>My Current</p>
                 <h2>Skills</h2>
