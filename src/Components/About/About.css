@@ -1,0 +1,21 @@
+
+
+.about-div{
+    margin-left: 50px;
+    padding: 4rem 0;
+}
+.about-header{
+    display: flex;
+    align-items: center;
+}
+.about-header p{
+    margin-bottom: 55px;
+    font-size: 20px;
+    padding-right: 5px;
+    font-weight: 500;
+}
+.about-header h2{
+    font-size: 45px;
+    border-left: 5px solid crimson;
+    padding-left: 5px;
+}
