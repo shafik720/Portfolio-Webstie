@@ -13,7 +13,7 @@ const Projects = () => {
         <div className="project-div common-section">
             <h2>My Projects</h2>
             <hr />
-            <div className="all-projects">
+            <div className="all-projects py-4">
                 <div className="container">
                     <div className="row gy-5">
                     <div className="col-lg-6">
