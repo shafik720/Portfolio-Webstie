@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
     transition: all 0.3s ease;
 }
 .header-div.active{
@@ -31,6 +31,6 @@
 }
 .logo-icon p{
     color: white;
-    font-weight: 600;
-    font-size: 20px;
+    /* font-weight: 600; */
+    /* font-size: 20px; */
 }

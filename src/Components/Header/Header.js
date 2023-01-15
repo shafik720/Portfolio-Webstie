@@ -22,12 +22,15 @@ const Header = () => {
             </div>
             <div className="logo-icon">
                 <img src={homeLogo} alt=""/>
+                <p>About</p>
             </div>
             <div className="logo-icon">
                 <img src={homeLogo} alt=""/>
+                <p>Skills</p>
             </div>
             <div className="logo-icon">
                 <img src={homeLogo} alt=""/>
+                <p>Projects</p>
             </div>
         </div>
     );
