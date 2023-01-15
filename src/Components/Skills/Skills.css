@@ -48,10 +48,10 @@ for mobile responsiveness
 @media only screen and (max-width:660px){
     .skill-div{
         /* display: none; */
-        padding: 4rem 1em;
+        padding: 4rem 10px;
         border-radius: 10px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-        width: 85%;
+        width: 92%;
         margin:  50px auto;
     }
     .skill-details{

@@ -34,11 +34,14 @@
 @media only screen and (max-width:767px){
     .about-div{
         /* display: none; */
-        padding: 4rem 1rem;
+        padding: 4rem 10px;
         border-radius: 10px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.5);
-        width: 80%;
+        width: 92%;
         margin:  30px auto;
+    }
+    .about-header{
+        justify-content: center;
     }
     .about-header h2{
         font-size: 25px;
