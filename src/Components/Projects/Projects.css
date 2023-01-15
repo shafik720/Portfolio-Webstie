@@ -25,6 +25,9 @@
     font-size: 30px;
     cursor: pointer;
 }
+.project-header-right a:first-child{
+    color: black;
+}
 .project-header-left img{
     width: 40px;
 }

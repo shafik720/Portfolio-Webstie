@@ -62,8 +62,11 @@ const Projects = () => {
                                             <img src={folderLogo} alt="" />
                                         </div>
                                         <div className="project-header-right">
+                                            <a href="https://github.com/shafik720/Tetris-Game-with-Vanilla-Javascript-Html-Css" target="_blank" rel="noopener noreferrer">
                                             <span><FontAwesomeIcon icon={faGithub} /></span>
-                                            <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span>
+                                            </a>
+                                            <a href="https://tetris-russell.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                            <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
                                         </div>
                                     </div>
                                     <div className="single-project-body">
