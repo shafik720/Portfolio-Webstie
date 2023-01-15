@@ -101,13 +101,16 @@ const Projects = () => {
                                                 <img src={folderLogo} alt="" />
                                             </div>
                                             <div className="project-header-right">
-                                                <span><FontAwesomeIcon icon={faGithub} /></span>
-                                                <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span>
+                                                <a href="https://github.com/shafik720/Card-Memory-Game-with-Javascript-Html-Css" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faGithub} /></span>
+                                                </a>
+                                                <a href="https://card-memory-game-shafiq.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
                                             </div>
                                         </div>
                                         <div className="single-project-body">
-                                            <h2>Photographer's Website (Portfolio + E-commerce)</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error recusandae magnam illum placeat minima a eius iusto qui? Magnam facilis quas laboriosam mollitia minus quibusdam tempore fuga maiores, commodi ullam.</p>
+                                            <h2>Card Memory Game </h2>
+                                            <p>This is a Card Memory Game where user have to memorize pictures and guess them correctly. I made this game with Vanilla Javascript, Html, Css only.</p>
                                         </div>
                                     </div>
 
@@ -116,11 +119,6 @@ const Projects = () => {
                                             <span><p>Html</p></span>
                                             <span><p>Css</p></span>
                                             <span><p>Javascript</p></span>
-                                            <span><p>React</p></span>
-                                            <span><p>Firebase</p></span>
-                                            <span><p>Local Storage</p></span>
-                                            <span><p>React Bootstrap</p></span>
-                                            <span><p>React Router</p></span>
                                         </div>
                                     </div>
                                 </div>
@@ -138,13 +136,16 @@ const Projects = () => {
                                                 <img src={folderLogo} alt="" />
                                             </div>
                                             <div className="project-header-right">
-                                                <span><FontAwesomeIcon icon={faGithub} /></span>
-                                                <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span>
+                                                <a href="https://github.com/shafik720/Tetris-Game-with-Vanilla-Javascript-Html-Css" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faGithub} /></span>
+                                                </a>
+                                                <a href="https://tetris-russell.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
                                             </div>
                                         </div>
                                         <div className="single-project-body">
-                                            <h2>Photographer's Website (Portfolio + E-commerce)</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error recusandae magnam illum placeat minima a eius iusto qui? Magnam facilis quas laboriosam mollitia minus quibusdam tempore fuga maiores, commodi ullam.</p>
+                                            <h2>Tetris Game </h2>
+                                            <p>I made this famous childhood tetris game with Vanilla Javascript, Html, Css</p>
                                         </div>
                                     </div>
 
@@ -153,11 +154,6 @@ const Projects = () => {
                                             <span><p>Html</p></span>
                                             <span><p>Css</p></span>
                                             <span><p>Javascript</p></span>
-                                            <span><p>React</p></span>
-                                            <span><p>Firebase</p></span>
-                                            <span><p>Local Storage</p></span>
-                                            <span><p>React Bootstrap</p></span>
-                                            <span><p>React Router</p></span>
                                         </div>
                                     </div>
                                 </div>
