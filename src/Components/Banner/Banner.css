@@ -141,6 +141,7 @@ for mobile responsiveness
     .banner-right h1{
         text-transform: uppercase;
         font-size: 25px;
+        /* color: #212529; */
     }
 
 }
