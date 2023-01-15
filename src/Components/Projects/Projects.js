@@ -136,16 +136,16 @@ const Projects = () => {
                                                 <img src={folderLogo} alt="" />
                                             </div>
                                             <div className="project-header-right">
-                                                <a href="https://github.com/shafik720/Tetris-Game-with-Vanilla-Javascript-Html-Css" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://github.com/shafik720/Project---Math-Game" target="_blank" rel="noopener noreferrer">
                                                     <span><FontAwesomeIcon icon={faGithub} /></span>
                                                 </a>
-                                                <a href="https://tetris-russell.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                <a href="https://math-game-by-shafiq.netlify.app/" target="_blank" rel="noopener noreferrer">
                                                     <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
                                             </div>
                                         </div>
                                         <div className="single-project-body">
-                                            <h2>Tetris Game </h2>
-                                            <p>I made this famous childhood tetris game with Vanilla Javascript, Html, Css</p>
+                                            <h2>Math Game </h2>
+                                            <p>User will play this game by selecting the correct box with the correct result of multiplying 2 numbers showing at the top of the screen. There will be  4 boxes, Only one of them will have right answers only. This game is made with Vanilla Javascript, Html, Css</p>
                                         </div>
                                     </div>
 
