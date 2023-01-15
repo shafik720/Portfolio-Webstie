@@ -41,6 +41,9 @@
     cursor: pointer;
     margin-left: 15px;
 }
+.logo-icon p{
+    margin-bottom: 0;
+}
 .logo-text{
     color: white;
     text-indent: 5px;
