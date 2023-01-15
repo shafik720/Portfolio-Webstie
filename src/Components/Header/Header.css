@@ -12,6 +12,10 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    transition: all 0.3s ease;
+}
+.header-div.active{
+    width: 150px;
 }
 .header-div img{
     width: 40px;
