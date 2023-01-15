@@ -1,0 +1,41 @@
+
+
+.banner-div{
+    padding: 4rem 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.banner-left-parent{
+    /* border: 10px solid #1c2130; */
+    border: 10px solid #231f20;
+    width:  350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+.banner-left{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('https://i.ibb.co/6rBQWrX/user.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-left img{
+    width: 105%;    
+    
+    /* height: 100%; */
+}
+
+.banner-right{
+    width: 50%;
+    border: 2px solid;
+}
