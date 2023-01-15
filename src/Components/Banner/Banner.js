@@ -19,20 +19,27 @@ const Banner = () => {
                 <p>A Front-End Web Developer passionate about creating interactive applications and experiences on the web.</p>
                 <div className="social-icons">
                     <div className="social-single-icon">
-                        <div className="first-logo">
-                            <img src={githubLogo} alt="" />
-                        </div>
+                        <a href="https://github.com/shafik720" target="_blank" rel="noopener noreferrer">
+                            <div className="first-logo">
+                                <img src={githubLogo} alt="" />
+                            </div>
+                        </a>
                     </div>
                     <div className="social-single-icon">
-                        <div className="first-logo">
-                            <img src={linkedLogo} alt="" />
-                        </div>
+                        <a href="https://www.linkedin.com/in/shafiq5russell/" target="_blank" rel="noopener noreferrer">
+                            <div className="first-logo">
+                                <img src={linkedLogo} alt="" />
+                            </div>
+                        </a>
                     </div>
-                    <div className="social-single-icon">
-                        <div className="first-logo">
-                            <img src={twitterLogo} alt="" />
+                    <a href="https://twitter.com/shafiq_russell" target="_blank" rel="noopener noreferrer">
+                        <div className="social-single-icon">
+                            <div className="first-logo">
+                                <img src={twitterLogo} alt="" />
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
             </div>
         </div>
