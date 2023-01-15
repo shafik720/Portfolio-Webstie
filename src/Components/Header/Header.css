@@ -18,16 +18,20 @@
 .header-div.active{
     width: 150px;
 }
-.header-div img{
-    width: 40px;
-    cursor: pointer;
-}
+
 
 .logo-icon{
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 15px;
+    /* border: 1px solid white; */
+    width: 70%;
+}
+.logo-icon img{
+    width: 40px;
+    cursor: pointer;
 }
 .logo-icon p{
     color: white;
