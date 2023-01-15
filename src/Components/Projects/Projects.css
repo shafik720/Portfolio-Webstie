@@ -1,10 +1,16 @@
 
 
 
+.project-div {
+    background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url('https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg');    
+    background-position: center;
+}
 .all-projects{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 35px 0;
+    
+
 }
 .single-projects{
     padding: 30px 25px;
@@ -46,13 +52,16 @@
     margin-top: 25px;
 }
 .project-technology span{
-    border: 3px solid #007ACC;
+    /* border: 3px solid #007ACC; */
+    background: #00AF80;
     padding: 5px 10px;
     border-radius: 10px;
+    /* box-shadow: 0 1px 5px rgba(0,0,0,0.5); */
 }
 .project-technology span p{
     margin: 0;    
     font-family: 'Nunito', sans-serif  !important;
-    font-weight: 600;
+    font-weight: 700;
+    color: white;
 
 }

@@ -10,7 +10,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Projects = () => {
     return (
-        <div className="common-section">
+        <div className="project-div common-section">
             <h2>My Projects</h2>
             <hr />
             <div className="all-projects">
