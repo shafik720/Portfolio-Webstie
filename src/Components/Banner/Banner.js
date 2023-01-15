@@ -13,10 +13,9 @@ const Banner = () => {
             </div>
 
             <div className="banner-right">
-                <p>Hi </p>
-                <h2>I'm</h2>
+                <h2>Hi, I'm</h2>
                 <h1>Shafiqul Hasan Russell</h1>
-                <p>A Front-End Web Developer passionate about creating interactive applications and experiences on the web.</p>
+                <p>A Web Developer with a focus on the MERN stack, but still exploring other technologies and frameworks that catch my interest! if you're looking for a developer to add to your team, I'd love to hear from you!</p>
                 <div className="social-icons">
                     {/*------------------ Github linking ---------------*/}
                     <div className="social-single-icon">

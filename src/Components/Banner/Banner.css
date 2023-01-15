@@ -42,9 +42,13 @@ banner right side
 .banner-right p, h2,h1 {
     margin: 0;
 }
+.banner-right p{
+    font-weight: 500;
+}
 .banner-right h1{
     text-transform: uppercase;
     font-size: 40px;
+    font-weight: 700;
 }
 
 
