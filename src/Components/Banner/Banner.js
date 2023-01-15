@@ -1,8 +1,8 @@
 import React from 'react';
 import './Banner.css';
-import twitterLogo from '../../Utilities/img/logo/twitter (3).svg';
+import twitterLogo from '../../Utilities/img/logo/twitter (1).svg';
 import githubLogo from '../../Utilities/img/logo/github.svg';
-import linkedLogo from '../../Utilities/img/logo/likedin (1).svg';
+import linkedLogo from '../../Utilities/img/logo/likedin.svg';
 
 
 const Banner = () => {
@@ -18,6 +18,7 @@ const Banner = () => {
                 <h1>Shafiqul Hasan Russell</h1>
                 <p>A Front-End Web Developer passionate about creating interactive applications and experiences on the web.</p>
                 <div className="social-icons">
+                    {/*------------------ Github linking ---------------*/}
                     <div className="social-single-icon">
                         <a href="https://github.com/shafik720" target="_blank" rel="noopener noreferrer">
                             <div className="first-logo">
@@ -25,6 +26,7 @@ const Banner = () => {
                             </div>
                         </a>
                     </div>
+                    {/*------------------ LinkedIn linking ---------------*/}
                     <div className="social-single-icon">
                         <a href="https://www.linkedin.com/in/shafiq5russell/" target="_blank" rel="noopener noreferrer">
                             <div className="first-logo">
@@ -32,6 +34,7 @@ const Banner = () => {
                             </div>
                         </a>
                     </div>
+                    {/*------------------ Twitter linking ---------------*/}
                     <a href="https://twitter.com/shafiq_russell" target="_blank" rel="noopener noreferrer">
                         <div className="social-single-icon">
                             <div className="first-logo">
