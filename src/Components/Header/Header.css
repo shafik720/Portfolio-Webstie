@@ -27,11 +27,18 @@
     align-items: center;
     gap: 15px;
     /* border: 1px solid white; */
+    border-radius: 5px;
     width: 70%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.logo-icon:hover{
+    background: rgba(255, 255, 255, 0.137);
 }
 .logo-icon img{
-    width: 40px;
+    width: 35px;
     cursor: pointer;
+    margin-left: 15px;
 }
 .logo-icon p{
     color: white;
