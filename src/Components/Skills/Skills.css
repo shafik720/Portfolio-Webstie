@@ -11,9 +11,17 @@
 }
 
 
+.skill-details{
+    display: grid;
+    width: 80%;
+    margin: 30px auto;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 10px;
+    row-gap: 45px;
+}
 .skill-single-div{
-    width: 70px;
-    height: 70px;
+   width: 70px;
+height: 70px;
     /* border: 2px solid grey; */
     display: flex;
     justify-content: center;
