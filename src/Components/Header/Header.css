@@ -7,7 +7,8 @@
     left: 0;
     top: 0;
     height: 100%;
-    width: 80px;
+    /* width: 80px; */
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,4 +21,16 @@
 .header-div img{
     width: 40px;
     cursor: pointer;
+}
+
+.logo-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.logo-icon p{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
 }
