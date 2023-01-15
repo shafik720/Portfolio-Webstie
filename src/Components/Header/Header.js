@@ -33,6 +33,11 @@ const Header = () => {
             document.querySelector('.header-div').classList.remove('mobile');
         }
     }, [isActive])
+    const moveAllClass = () => {
+        document.querySelector('.menubar-mobile').classList.remove('active');
+        document.querySelector('.header-div').classList.remove('mobile');
+        document.querySelector('.header-div').classList.remove('active');
+    }
     return (
         <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
             <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
@@ -46,7 +51,8 @@ const Header = () => {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={200}
+                    onClick={moveAllClass}
                 >
                     <img src={homeLogo} alt="" />
                     <p className="logo-text">Home</p>
@@ -59,7 +65,8 @@ const Header = () => {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={200}
+                    onClick={moveAllClass}
                 >
                     <img src={userLogo} alt="" />
                     <p className="logo-text">About</p>
@@ -72,7 +79,8 @@ const Header = () => {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={200}
+                    onClick={moveAllClass}
                 >
                     <img src={skillLogo} alt="" />
                     <p className="logo-text">Skills</p>
@@ -87,6 +95,7 @@ const Header = () => {
                     smooth={true}
                     offset={-70}
                     duration={300}
+                    onClick={moveAllClass}
                 >
                     <img src={projectLogo} alt="" />
                     <p className="logo-text">Projects</p>

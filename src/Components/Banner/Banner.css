@@ -51,6 +51,11 @@ banner right side
     font-weight: 700;
 }
 
+.important-text{
+    font-weight: 700;
+    font-size: 20px;
+    color: crimson;
+}
 
 
 .social-icons{
