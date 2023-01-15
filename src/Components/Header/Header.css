@@ -42,6 +42,9 @@
 }
 .logo-icon p{
     color: white;
-    /* font-weight: 600; */
+    text-indent: 5px;
+    letter-spacing: 1px;
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 600;
     /* font-size: 20px; */
 }
