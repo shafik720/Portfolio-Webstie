@@ -161,6 +161,78 @@ const Projects = () => {
                             </div>
                         </div>
                         {/* ------ */}
+                        {/* ------ */}
+                        <div className="col-lg-6">
+                            <div className="h-100">
+                                <div className="single-projects h-100">
+                                    <div className="">
+                                        <div className="single-project-header">
+                                            <div className="project-header-left">
+                                                <img src={folderLogo} alt="" />
+                                            </div>
+                                            <div className="project-header-right">
+                                                <a href="https://github.com/shafik720/Language-translator-with-Javascript-Html-Css" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faGithub} /></span>
+                                                </a>
+                                                <a href="https://translator-by-shafiq.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
+                                            </div>
+                                        </div>
+                                        <div className="single-project-body">
+                                            <h2>Language Translator App </h2>
+                                            <p>This site will translate any language to any selected language. For this i have used language api. This site is made with Vanilla Javascript, Html, Css</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="single-project-footer">
+                                        <div className="project-technology">
+                                            <span><p>Html</p></span>
+                                            <span><p>Css</p></span>
+                                            <span><p>Javascript</p></span>
+                                            <span><p>API</p></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        {/* ------ */}
+                        {/* ------ */}
+                        <div className="col-lg-6">
+                            <div className="h-100">
+                                <div className="single-projects h-100">
+                                    <div className="">
+                                        <div className="single-project-header">
+                                            <div className="project-header-left">
+                                                <img src={folderLogo} alt="" />
+                                            </div>
+                                            <div className="project-header-right">
+                                                <a href="https://github.com/shafik720/currency-converter-first-try" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faGithub} /></span>
+                                                </a>
+                                                <a href="https://currency-converter-by-shafiq.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                                    <span><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></span></a>
+                                            </div>
+                                        </div>
+                                        <div className="single-project-body">
+                                            <h2>Currency Converter </h2>
+                                            <p>This site will convert from any currency to any currency. The currency rate is always updated via api</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="single-project-footer">
+                                        <div className="project-technology">
+                                            <span><p>Html</p></span>
+                                            <span><p>Css</p></span>
+                                            <span><p>Javascript</p></span>
+                                            <span><p>API</p></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        {/* ------ */}
                     </div>
                 </div>
 
