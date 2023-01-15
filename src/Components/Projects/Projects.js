@@ -67,8 +67,8 @@ const Projects = () => {
                                         </div>
                                     </div>
                                     <div className="single-project-body">
-                                        <h2>Photographer's Website (Portfolio + E-commerce)</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error recusandae magnam illum placeat minima a eius iusto qui? Magnam facilis quas laboriosam mollitia minus quibusdam tempore fuga maiores, commodi ullam.</p>
+                                        <h2>Tetris Game </h2>
+                                        <p>I made this famous childhood tetris game with Vanilla Javascript, Html, Css</p>
                                     </div>
                                     </div>
                                     
@@ -77,11 +77,6 @@ const Projects = () => {
                                             <span><p>Html</p></span>
                                             <span><p>Css</p></span>
                                             <span><p>Javascript</p></span>
-                                            <span><p>React</p></span>
-                                            <span><p>Firebase</p></span>
-                                            <span><p>Local Storage</p></span>
-                                            <span><p>React Bootstrap</p></span>
-                                            <span><p>React Router</p></span>
                                         </div>
                                     </div>
                                 </div>
