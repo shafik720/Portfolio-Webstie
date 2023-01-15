@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 import homeLogo from '../../Utilities/img/home.png';
+import userLogo from '../../Utilities/img/avatar.png';
+import skillLogo from '../../Utilities/img/skill.png';
+import projectLogo from '../../Utilities/img/folder.png';
 
 
 
@@ -21,15 +24,15 @@ const Header = () => {
                 <p>Home</p>
             </div>
             <div className="logo-icon">
-                <img src={homeLogo} alt=""/>
+                <img src={userLogo} alt=""/>
                 <p>About</p>
             </div>
             <div className="logo-icon">
-                <img src={homeLogo} alt=""/>
+                <img src={skillLogo} alt=""/>
                 <p>Skills</p>
             </div>
             <div className="logo-icon">
-                <img src={homeLogo} alt=""/>
+                <img src={projectLogo} alt=""/>
                 <p>Projects</p>
             </div>
         </div>
