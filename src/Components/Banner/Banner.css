@@ -99,7 +99,7 @@ for mobile responsiveness
         align-items: center;
         flex-wrap: wrap;
         gap: 40px;
-        min-height: 100vh;
+        min-height:unset;
     }
     .banner-left-parent{
         border: 10px solid #231f20;
@@ -123,6 +123,15 @@ for mobile responsiveness
     }
       .banner-right{
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-right h1{
+        text-transform: uppercase;
+        font-size: 25px;
     }
 
 }
