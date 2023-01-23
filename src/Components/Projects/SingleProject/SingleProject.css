@@ -1,0 +1,44 @@
+
+.single-project-body{
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.single-project-body h2{
+    font-size: 22px;
+    color: #2A2A2A;
+    font-weight: 700;
+}
+
+
+.project-thumb{
+    border: 3px solid #00AF80;
+    background: rgba(33, 37, 41, 0.527);
+    border-radius: 10px;
+    position: absolute;
+    top: 150%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow-y: scroll;
+}
+.single-project-body:hover .project-thumb{
+    top: 10%;
+}
+.project-thumb-img-parent{
+    /* overflow: scroll; */
+}
+.project-thumb-img{
+    margin: auto;
+    text-align: center;
+}
+.project-thumb-img img{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px 10px 0 0;
+}

@@ -5,7 +5,8 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import { Button } from 'react-bootstrap';
+import './SingleProject.css';
+import projectThumb from '../../../Utilities/img/project-thumb.png'
 
 const SingleProject = (props) => {
     const { id, github, liveSite, projectName, desc, technology } = props.index;
@@ -42,8 +43,17 @@ const SingleProject = (props) => {
                             </div>
                         </div>
                         <div className="single-project-body">
-                            <h2>{projectName}</h2>
-                            <p>{desc}</p>
+                            <div className="">
+                                <h2>{projectName}</h2>
+                                <p>{desc}</p>
+                            </div>
+                            <div className="project-thumb">
+                                <div className="project-thumb-img-parent">
+                                    <div className="project-thumb-img">
+                                        <img src={projectThumb} alt=""/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
