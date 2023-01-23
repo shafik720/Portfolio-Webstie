@@ -6,10 +6,9 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import './SingleProject.css';
-import projectThumb from '../../../Utilities/img/project-thumb.png'
 
 const SingleProject = (props) => {
-    const { id, github, liveSite, projectName, desc, technology } = props.index;
+    const { id, github, liveSite, projectName, desc, technology, thumb } = props.index;
     const renderTooltip = props => (
         <Tooltip {...props}>Github Repo Link</Tooltip>
     );
@@ -50,7 +49,7 @@ const SingleProject = (props) => {
                             <div className="project-thumb">
                                 <div className="project-thumb-img-parent">
                                     <div className="project-thumb-img">
-                                        <img src={projectThumb} alt=""/>
+                                        <img src={thumb} alt=""/>
                                     </div>
                                 </div>
                             </div>
