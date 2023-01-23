@@ -43,7 +43,7 @@ const SingleProject = (props) => {
                             </div>
                         </div>
                         <div className="single-project-body">
-                            <div className="">
+                            <div className="project-desc">
                                 <h2>{projectName}</h2>
                                 <p>{desc}</p>
                             </div>
