@@ -1,0 +1,58 @@
+
+[
+    {
+      "id": 1,
+      "title": "Html",
+      "img": "https://i.ibb.co/XDDjxKG/html.png"            
+    },
+    {
+      "id": 2,
+      "title": "Css",
+      "img": "https://i.ibb.co/82WJBcR/css-1.png"            
+    },
+    {
+      "id": 3,
+      "title": "Bootstrap",
+      "img": "https://i.ibb.co/3Frrqm2/bootstrap-1.png"            
+    },
+    {
+      "id": 4,
+      "title": "Javascript",
+      "img": "https://i.ibb.co/4gPTwkB/js.png"            
+    },
+    {
+      "id": 5,
+      "title": "React",
+      "img": "https://i.ibb.co/qnPG9fF/react.png"            
+    },
+    {
+      "id": 6,
+      "title": "Firebase Authentication",
+      "img": "https://i.ibb.co/wQcQQqz/firebase.png"            
+    },
+    {
+      "id": 7,
+      "title": "Redux",
+      "img": "https://i.ibb.co/h2LXBq8/redux.png"            
+    },
+    {
+      "id": 8,
+      "title": "Mongodb",
+      "img": "https://i.ibb.co/ggVZ5zh/mongodb.png"            
+    },
+    {
+      "id": 9,
+      "title": "Node",
+      "img": "https://i.ibb.co/qx5qmqL/node.png"            
+    },
+    {
+      "id": 10,
+      "title": "Tailwind Css",
+      "img": "https://i.ibb.co/Dt0zZXg/tailwind-css.png"            
+    },
+    {
+      "id": 11,
+      "title": "Daisy UI",
+      "img": "https://i.ibb.co/Mgpd10G/daisy.png"            
+    }
+]
