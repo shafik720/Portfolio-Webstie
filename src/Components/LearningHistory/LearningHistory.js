@@ -12,7 +12,12 @@ const LearningHistory = () => {
         fetch('learningHistory.json')
         .then(res => res.json())
         .then(data => setData(data))
-    },[])
+    },[]);
+    const reversing = (arr) => {
+        const dummy = arr.sort((a,b)=>b.id - a.id);
+        return dummy;
+    }
+    // console.log(data.sort((a,b)=> b-a))
     return (
         <div className='learning-history'>
             <div className="about-header skill-header">
@@ -21,7 +26,7 @@ const LearningHistory = () => {
             </div>
             <div className="learning-history-details">
                 {/*----------------- History here  ---------------*/}
-                {data.map(index => <HistoryCard key={index.id} data={index}></HistoryCard>)}
+                {reversing(data).map(index => <HistoryCard key={index.id} data={index}></HistoryCard>)}
             </div>
         </div>
     );

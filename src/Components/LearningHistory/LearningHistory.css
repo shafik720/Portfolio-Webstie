@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    border: 2px solid #2a2a2a;
+    border: 2px solid rgba(42, 42, 42, 0.679);
     padding: 5px 15px;
     border-radius: 3px;
 }
