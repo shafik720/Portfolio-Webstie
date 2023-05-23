@@ -59,5 +59,10 @@
       "id": 12,
       "title": "Binary Search",
       "img": "https://i.ibb.co/56kk2xM/binary.png"            
+    },
+    {
+      "id": 13,
+      "title": "JWT Token",
+      "img": "https://i.ibb.co/z5Mv9rH/jwt-token.png"            
     }
 ]
