@@ -6,18 +6,13 @@ import About from './Components/About/About';
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import LearningHistory from './Components/LearningHistory/LearningHistory';
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <div className="main-div">
-        <Banner></Banner>
-        <About></About>
-        <Skills></Skills>
-        <LearningHistory></LearningHistory>
-        <Projects></Projects>
-      </div>
+      <Home></Home>
 
     </div>
   );
