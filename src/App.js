@@ -7,13 +7,16 @@ import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import LearningHistory from './Components/LearningHistory/LearningHistory';
 import Home from './Pages/Home/Home';
+import { RouterProvider } from 'react-router-dom';
+import Router from './Utilities/Router/Router';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Home></Home>
-
+      <div className="main-div">
+        <RouterProvider router={Router}></RouterProvider>
+      </div>
     </div>
   );
 }

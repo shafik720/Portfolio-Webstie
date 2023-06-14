@@ -7,7 +7,7 @@ import Projects from '../../Components/Projects/Projects';
 
 const Home = () => {
     return (
-        <div className="main-div">
+        <div>
             <Banner></Banner>
             <About></About>
             <Skills></Skills>
