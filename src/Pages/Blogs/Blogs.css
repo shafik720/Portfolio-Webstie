@@ -1,6 +1,6 @@
 
 .writting-div{
-    width: 50%;
+    width: 70%;
     margin: 70px auto;
 }
 .post-button{
@@ -10,5 +10,27 @@
     padding: 15px 20px;
     border-radius: 5px;
     border: none;
+    font-weight: 600;
+}
+.posted{
+    background: grey;
+}
+.writting-div p {
+    margin: 15px 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: grey;
+    text-transform: uppercase;
+}
+.blog-title{
+    margin-bottom: 30px;
+}
+.blog-title input{
+    width: 100%;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px 10px;
     font-weight: 600;
 }
