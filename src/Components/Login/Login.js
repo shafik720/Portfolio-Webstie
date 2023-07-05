@@ -3,6 +3,7 @@ import './Login.css';
 import auth from '../../Utilities/firebase.init';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import {useAuthState} from 'react-firebase-hooks/auth'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -26,8 +27,11 @@ const Login = () => {
             });
     }
 
+    const navigate = useNavigate();
     useEffect(()=>{
-        console.log(user);
+        if(user?.email){
+            navigate('/adminDashboard');
+        }
     },[user])
 
     return (
