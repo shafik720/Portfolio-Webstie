@@ -1,11 +1,20 @@
 import React from 'react';
 import './Dashboard.css';
 import auth from '../../Utilities/firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
     const [user, loading, error] = useAuthState(auth);
-    console.log(user);
+    const navigate = useNavigate();
+
+    const[signOut] = useSignOut(auth);
+    const handleSignout = () => {
+        signOut();
+    }
+    const handleAddBlogs = () => {
+        navigate('/postBlogs');
+    }
 
     let content = null;
     if (loading && !error) {
@@ -17,15 +26,16 @@ const Dashboard = () => {
     if (user?.email === 'shafikrasel5@gmail.com') {
         content = <div className='dashboard-div'>
             <button>View Blogs</button>
-            <button>Add Blogs</button>
-            <button>Logout</button>
+            <button onClick={handleAddBlogs}>Add Blogs</button>
+            <button onClick={handleSignout}>Logout</button>
         </div>
     } else {
         content = <p>You are not authorized to see this</p>
-
     }
+
+
     return (
-        <div className="">
+        <div className="dashboard-div">
             {content}
         </div>
     );
