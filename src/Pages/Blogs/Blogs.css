@@ -34,3 +34,13 @@
     padding: 5px 10px;
     font-weight: 600;
 }
+
+.blog-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blog-category input{
+    margin: 0 15px;
+}
