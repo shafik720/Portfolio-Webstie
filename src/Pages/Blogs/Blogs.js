@@ -1,6 +1,7 @@
 import JoditEditor from 'jodit-react';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './Blogs.css';
+import { errorMsg } from '../../Utilities/Popup Msg/errorMsg';
 
 const Blogs = () => {
     const editor = useRef(null);
@@ -14,8 +15,21 @@ const Blogs = () => {
         mac: false,
     })
 
+    const handleCheckBoxChange = event => {
+        const { name, checked } = event.target;
+        setCheckboxes({ ...checkboxes, [name]: checked });
+    }
+
     const handleSubmit = () => {
-        /*         if (title.length > 0) {
+        const selectedCheckboxes = Object.entries(checkboxes).filter(([name, isChecked]) => isChecked).map(([name]) => name);
+
+        // Perform any necessary actions with the selected checkboxes array
+        if (title.length > 0) {
+            if (selectedCheckboxes.length < 1) {
+                errorMsg('You must select a Catagory !');
+            } else {
+                let confirm = window.confirm('Post a new Blog ? ');
+                if (confirm) {
                     fetch('http://localhost:2500/postBlog', {
                         method: 'POST',
                         headers: {
@@ -31,18 +45,17 @@ const Blogs = () => {
                         })
                         .catch(error => {
                             console.log(error);
+                            errorMsg('There was an server error posting the blog');
                         })
-                } */
-        const selectedCheckboxes = Object.entries(checkboxes).filter(([name, isChecked]) => isChecked).map(([name]) => name);
-        // Perform any necessary actions with the selected checkboxes array
-        console.log(selectedCheckboxes);
+                }
+            }
+        } else {
+            errorMsg('You must enter a title');
+        }
     }
 
 
-    const handleCheckBoxChange = event => {
-        const { name, checked } = event.target;
-        setCheckboxes({ ...checkboxes, [name]: checked });
-    }
+
     return (
         <div>
             <div className="writting-div">

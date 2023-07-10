@@ -9,6 +9,7 @@ import LearningHistory from './Components/LearningHistory/LearningHistory';
 import Home from './Pages/Home/Home';
 import { RouterProvider } from 'react-router-dom';
 import Router from './Utilities/Router/Router';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <div className="main-div">
         <RouterProvider router={Router}></RouterProvider>
       </div>
+      <ToastContainer /> 
     </div>
   );
 }
