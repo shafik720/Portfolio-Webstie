@@ -4,6 +4,7 @@ import auth from '../../Utilities/firebase.init';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import {useAuthState} from 'react-firebase-hooks/auth'
 import { useNavigate } from 'react-router-dom';
+import { errorMsg } from '../../Utilities/Popup Msg/errorMsg';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -23,7 +24,8 @@ const Login = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(error);
+                errorMsg(errorMessage);
+                // console.log(error);
             });
     }
 
