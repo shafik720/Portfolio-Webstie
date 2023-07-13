@@ -15,6 +15,9 @@ const Dashboard = () => {
     const handleAddBlogs = () => {
         navigate('/postBlogs');
     }
+    const handleViewBlogs = () => {
+        navigate('/allBlogs');
+    }
 
     let content = null;
     if (loading && !error) {
@@ -25,7 +28,7 @@ const Dashboard = () => {
     }
     if (user?.email === 'shafikrasel5@gmail.com') {
         content = <div className='dashboard-div'>
-            <button>View Blogs</button>
+            <button onClick={handleViewBlogs}>View Blogs</button>
             <button onClick={handleAddBlogs}>Add Blogs</button>
             <button onClick={handleSignout}>Logout</button>
         </div>
