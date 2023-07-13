@@ -13,6 +13,10 @@ const Blogs = () => {
     const [checkboxes, setCheckboxes] = useState({
         programming: false,
         mac: false,
+        webDevelopment : false,
+        dsa : false,
+        react : false
+
     })
 
     const handleCheckBoxChange = event => {
@@ -25,7 +29,8 @@ const Blogs = () => {
 
         // Perform any necessary actions with the selected checkboxes array
         if (title.length > 0) {
-            if (selectedCheckboxes.length < 1) {
+            console.log(selectedCheckboxes.length);
+            if (selectedCheckboxes.length <= 0) {
                 errorMsg('You must select a Catagory !');
             } else {
                 let confirm = window.confirm('Post a new Blog ? ');
@@ -35,7 +40,7 @@ const Blogs = () => {
                         headers: {
                             'Content-type': 'application/json'
                         },
-                        body: JSON.stringify({ content, catagory: 'mac' })
+                        body: JSON.stringify({ content, category : selectedCheckboxes, title })
                     })
                         .then(res => res.json())
                         .then(result => {
@@ -92,27 +97,33 @@ const Blogs = () => {
                     <span>
                         <input
                             type="checkbox"
-                            name="programming"
-                            id="web-development"
-                            value="web-development"
+                            name="webDevelopment"
+                            id="webDevelopment"
+                            value="webDdevelopment"
+                            checked={checkboxes.webDevelopment}
+                            onChange={handleCheckBoxChange}
                         />
                         <label htmlFor="web-development">Web development</label>
                     </span>
                     <span>
                         <input
                             type="checkbox"
-                            name="programming"
+                            name="dsa"
                             id="DSA"
                             value="DSA"
+                            checked={checkboxes.dsa}
+                            onChange={handleCheckBoxChange}
                         />
                         <label htmlFor="DSA">DSA</label>
                     </span>
                     <span>
                         <input
                             type="checkbox"
-                            name="programming"
+                            name="react"
                             id="react"
                             value="react"
+                            checked={checkboxes.react}
+                            onChange={handleCheckBoxChange}
                         />
                         <label htmlFor="react">React</label>
                     </span>
