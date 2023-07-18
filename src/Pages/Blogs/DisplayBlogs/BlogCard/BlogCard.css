@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: 50px 30px;
+    z-index: 50;
 }
 .blog-card{
     /* border: 3px solid grey; */
@@ -29,11 +30,13 @@
 .blog-footer p{
     margin: 0;
     color: #0b88ef;
+    font-weight: 600;
+    font-size: 15px;
 }
 .blog-style{
     width:  60px;
     height: 60px;
-    border: 5px solid grey;
+    border: 5px solid rgba(32, 32, 32, 0.674);
     background: white;
     border-radius: 100%;
     position: absolute;

@@ -15,6 +15,7 @@
     justify-content: center;
     gap: 15px;
     transition: all 0.3s ease;
+    z-index: 9999;
 }
 .header-div.active{
     width: 250px;
