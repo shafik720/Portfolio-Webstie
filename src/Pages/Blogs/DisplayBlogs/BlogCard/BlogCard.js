@@ -14,6 +14,7 @@ const BlogCard = () => {
                 <p>12 January 2023</p>
                 <button>Read More</button>
             </div>
+            <div className="blog-style"></div>
         </div>
     );
 };

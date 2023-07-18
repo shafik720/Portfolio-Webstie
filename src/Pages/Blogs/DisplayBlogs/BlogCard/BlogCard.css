@@ -2,13 +2,14 @@
 .blog-div{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin: 50px 0;
+    margin: 50px 30px;
 }
 .blog-card{
     /* border: 3px solid grey; */
     border-radius: 5px;
     padding: 30px 30px 5px 30px;
     box-shadow: 0 0px 15px rgba(0,0,0,0.3);
+    position: relative;
 }
 .blog-footer button{
     border: none;
@@ -28,4 +29,15 @@
 .blog-footer p{
     margin: 0;
     color: #0b88ef;
+}
+.blog-style{
+    width:  60px;
+    height: 60px;
+    border: 5px solid grey;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+    top:  -6%;
+    left: -6%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
