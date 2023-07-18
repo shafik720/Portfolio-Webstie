@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './DisplayBlogs.css';
 import axios from 'axios';
 import BlogCard from './BlogCard/BlogCard';
+import moment from 'moment';
 
 const DisplayBlogs = () => {
     const[data, setData] = useState([]);
@@ -16,9 +17,7 @@ const DisplayBlogs = () => {
         response();
     },[])
     console.log(data);
-    const now = new Date();
-    const convertedDate = now.toISOString();
-    console.log(convertedDate);
+
     return (
         <div className='blog-div'>
             {/* <p>Total Blog Found : {data.length}</p> */}

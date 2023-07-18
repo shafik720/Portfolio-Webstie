@@ -7,6 +7,25 @@
 .blog-card{
     /* border: 3px solid grey; */
     border-radius: 5px;
-    padding: 20px 15px;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    padding: 30px 30px 5px 30px;
+    box-shadow: 0 0px 15px rgba(0,0,0,0.3);
+}
+.blog-footer button{
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, #3f4e68,  #202020);
+    color: white;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.blog-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px;
+}
+.blog-footer p{
+    margin: 0;
+    color: #0b88ef;
 }
