@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './DisplayBlogs.css';
 import axios from 'axios';
+import BlogCard from './BlogCard/BlogCard';
 
 const DisplayBlogs = () => {
     const[data, setData] = useState([]);
@@ -11,11 +12,14 @@ const DisplayBlogs = () => {
             setData(res.data);
         }
     };
-    response();
+    useEffect(()=>{
+        response();
+    },[])
     console.log(data);
     return (
         <div>
             <p>Total Blog Found : {data.length}</p>
+            {data.map(index=><BlogCard index={index} key={index._id}></BlogCard>)}
         </div>
     );
 };
