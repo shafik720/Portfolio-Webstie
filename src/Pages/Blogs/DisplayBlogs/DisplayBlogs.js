@@ -16,12 +16,13 @@ const DisplayBlogs = () => {
     useEffect(()=>{
         response();
     },[])
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className='blog-div'>
             {/* <p>Total Blog Found : {data.length}</p> */}
             {data.map(index=><BlogCard index={index} key={index._id}></BlogCard>)}
+            {data.length===0 && <p>No Blogs Found !</p>}
         </div>
     );
 };
