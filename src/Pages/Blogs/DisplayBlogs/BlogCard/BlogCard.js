@@ -13,7 +13,7 @@ const BlogCard = ({index}) => {
     return (
         <div className='blog-card'>
             <div className="blog-title">
-                <h4>{title}</h4>
+                <h5>{title}</h5>
             </div>
             <div className="blog-details">                
             <p>{shortDesc}...</p>

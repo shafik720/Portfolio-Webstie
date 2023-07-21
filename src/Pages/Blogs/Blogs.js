@@ -36,13 +36,13 @@ const Blogs = () => {
 
         // Perform any necessary actions with the selected checkboxes array
         if (title.length > 0) {
-            console.log(selectedCheckboxes.length);
+            // console.log(selectedCheckboxes.length);
             if (selectedCheckboxes.length <= 0) {
                 errorMsg('You must select a Catagory !');
             } else {
                 let confirm = window.confirm('Post a new Blog ? ');
                 if (confirm) {
-                    fetch('http://localhost:2500/postBlog', {
+                    fetch('https://server-for-my-portfolio.vercel.app/postBlog', {
                         method: 'POST',
                         headers: {
                             'Content-type': 'application/json'

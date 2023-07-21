@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3,1fr);
     margin: 50px 30px;
     z-index: 50;
+    gap: 40px;
 }
 .blog-card{
     /* border: 3px solid grey; */
@@ -20,6 +21,9 @@
     padding: 5px 15px;
     font-size: 15px;
     border-radius: 5px;
+}
+.blog-details p{
+    color: rgba(128, 128, 128, 0.684);
 }
 .blog-footer{
     display: flex;

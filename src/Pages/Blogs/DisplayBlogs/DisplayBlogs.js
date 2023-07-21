@@ -8,7 +8,7 @@ const DisplayBlogs = () => {
     const[data, setData] = useState([]);
 
     const response = async() => {
-        const res =  await axios.get('http://localhost:2500/getAllBlogs');
+        const res =  await axios.get('https://server-for-my-portfolio.vercel.app/getAllBlogs');
         if(res.data.length>0){
             setData(res.data);
         }
