@@ -1,0 +1,90 @@
+
+/* styles.css (or your preferred CSS file) */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* width: 100%;
+    height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+  }
+  
+  /* .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  } */
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background: royalblue;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+  }
+  
+  .modal-content {
+    /* Add any additional styles for the content here */
+    background-color: white !important;
+    /* border: 3px solid red !important; */
+    padding: 80px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* margin-left: 80px; */
+    /* border-radius: 10px !important; */
+    /* min-height: 70vh !important; */
+    width: 100%;
+    height: 90%;
+    margin-left: 4.5rem ;
+    position: relative;
+    overflow-y: scroll;
+  }
+  .title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+
+
+.modal-close{
+  /* background: ; */
+}
+
+/*--------------------------------------------------------------------------
+For mobile:  
+---------------------------------------------------------------------------*/
+@media only screen and (max-width:480px){
+  .modal-content {
+    /* Add any additional styles for the content here */
+    background-color: white !important;
+    padding: 40px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-height: 70vh !important;
+    margin: 50px 10px;
+    overflow-y: scroll;
+  }
+}
+
+/*--------------------------------------------------- 
+For ipads, tablet:  
+---------------------------------------------------*/
+@media only screen and (min-width:481px) and (max-width:768px) {}
+
+/*-----------------------------------------
+ For Small screen, laptop:  
+-----------------------------------------*/
+@media only screen and (min-width:769px) and (max-width:1024px) {}

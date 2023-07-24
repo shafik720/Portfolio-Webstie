@@ -12,6 +12,10 @@
     padding: 30px 30px 5px 30px;
     box-shadow: 0 0px 15px rgba(0,0,0,0.3);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    /* align-items: center; */
 }
 .blog-footer button{
     border: none;
@@ -47,4 +51,48 @@
     top:  -6%;
     left: -6%;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+/*-------------------------------------------------------------------------- 
+Media query
+---------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------
+For mobile:  
+---------------------------------------------------------------------------*/
+@media only screen and (max-width:480px){
+    .blog-div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 50px 30px;
+    z-index: 50;
+    gap: 40px;
+}
+}
+
+/*--------------------------------------------------- 
+For ipads, tablet:  
+---------------------------------------------------*/
+@media only screen and (min-width:481px) and (max-width:768px) {
+    .blog-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 50px 30px;
+        z-index: 50;
+        gap: 40px;
+    }
+}
+
+/*-----------------------------------------
+ For Small screen, laptop:  
+-----------------------------------------*/
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    .blog-div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 50px 30px;
+        z-index: 50;
+        gap: 40px;
+    }
 }

@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css'
+import { ModalProvider } from './Utilities/Context Api/ModalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+  <React.StrictMode>
+    <ModalProvider>
       <App />
-    </React.StrictMode>
+    </ModalProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

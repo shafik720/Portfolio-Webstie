@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import { RouterProvider } from 'react-router-dom';
 import Router from './Utilities/Router/Router';
 import { ToastContainer } from 'react-toastify';
+import Modal from './Utilities/Context Api/Modal';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <RouterProvider router={Router}></RouterProvider>
       </div>
       <ToastContainer /> 
+      <Modal></Modal>
     </div>
   );
 }

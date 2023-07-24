@@ -1,5 +1,7 @@
 import React from 'react';
 import './BlogCard.css';
+import { useContext } from 'react';
+import { ModalContext } from '../../../../Utilities/Context Api/ModalContext';
 
 const BlogCard = ({index}) => {
     const {_id, content, category, title} = index;
@@ -9,7 +11,12 @@ const BlogCard = ({index}) => {
     const textFromContent = tempContent.textContent;
 
     const shortDesc = textFromContent.split("").slice(0,150).join("");
-    console.log(shortDesc);
+    // console.log(content);
+
+    const {openModal} = useContext(ModalContext) ; 
+    const handleModal = () => {
+        openModal({desc : content, title});
+    }
     return (
         <div className='blog-card'>
             <div className="blog-title">
@@ -20,7 +27,7 @@ const BlogCard = ({index}) => {
             </div>
             <div className="blog-footer">
                 <p>12 January 2023</p>
-                <button>Read More</button>
+                <button onClick={handleModal}>Read More</button>
             </div>
             <div className="blog-style"></div>
         </div>

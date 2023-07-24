@@ -49,7 +49,7 @@
 }
 
 @media only screen and (max-width:767px){
-  .common-section{
+  .common-section {
     padding: 4rem 1em;
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
