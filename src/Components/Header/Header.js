@@ -39,67 +39,69 @@ const Header = () => {
         document.querySelector('.header-div').classList.remove('active');
     }
     return (
-        <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
-            <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
-                <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
-                <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
-            </div>
-            <div draggable className="logo-icon">
-                <Link
-                    activeClass="active"
-                    to="banner"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={200}
-                    onClick={moveAllClass}
-                >
-                    <img src={homeLogo} alt="" />
-                    <p className="logo-text">Home</p>
-                </Link>
-            </div>
-            <div draggable className="logo-icon">
-                <Link
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={200}
-                    onClick={moveAllClass}
-                >
-                    <img src={userLogo} alt="" />
-                    <p className="logo-text">About</p>
-                </Link>
-            </div>
-            <div draggable className="logo-icon">
-                <Link
-                    activeClass="active"
-                    to="skill"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={200}
-                    onClick={moveAllClass}
-                >
-                    <img src={skillLogo} alt="" />
-                    <p className="logo-text">Skills</p>
-                </Link>
+        <div className="">
+            <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
+                <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
+                    <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
+                    <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
+                </div>
+                <div draggable className="logo-icon">
+                    <Link
+                        activeClass="active"
+                        to="banner"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={200}
+                        onClick={moveAllClass}
+                    >
+                        <img src={homeLogo} alt="" />
+                        <p className="logo-text">Home</p>
+                    </Link>
+                </div>
+                <div draggable className="logo-icon">
+                    <Link
+                        activeClass="active"
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={200}
+                        onClick={moveAllClass}
+                    >
+                        <img src={userLogo} alt="" />
+                        <p className="logo-text">About</p>
+                    </Link>
+                </div>
+                <div draggable className="logo-icon">
+                    <Link
+                        activeClass="active"
+                        to="skill"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={200}
+                        onClick={moveAllClass}
+                    >
+                        <img src={skillLogo} alt="" />
+                        <p className="logo-text">Skills</p>
+                    </Link>
 
-            </div>
-            <div draggable className="logo-icon">
-                <Link
-                    activeClass="active"
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={300}
-                    onClick={moveAllClass}
-                >
-                    <img src={projectLogo} alt="" />
-                    <p className="logo-text">Projects</p>
-                </Link>
+                </div>
+                <div draggable className="logo-icon">
+                    <Link
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={300}
+                        onClick={moveAllClass}
+                    >
+                        <img src={projectLogo} alt="" />
+                        <p className="logo-text">Projects</p>
+                    </Link>
+                </div>
             </div>
         </div>
     );
