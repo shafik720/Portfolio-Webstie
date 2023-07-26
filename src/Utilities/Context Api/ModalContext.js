@@ -7,6 +7,13 @@ const ModalProvider = ({ children }) => {
     const [isOpen, setIsopen] = useState(false);
     const [content, setContent] = useState(null);
 
+    // --- for changing the navbar style when user is in blog page
+    const [isBlog, setIsBlog] = useState(false); 
+    const changeNavbar = (isTrue) => {
+        console.log('Clicked');
+        setIsBlog(isTrue);
+    }
+
     const openModal = (modalContent) => {
         setContent(modalContent);
         setIsopen(true);
@@ -17,7 +24,7 @@ const ModalProvider = ({ children }) => {
         setIsopen(false);
     }
     return (
-        <ModalContext.Provider value={{ isOpen, openModal, closeModal, content }}>
+        <ModalContext.Provider value={{ isOpen, openModal, closeModal, content, isBlog, changeNavbar }}>
             {children}
         </ModalContext.Provider>
     )

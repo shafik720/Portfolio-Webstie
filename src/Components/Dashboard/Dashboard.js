@@ -13,10 +13,10 @@ const Dashboard = () => {
         signOut();
     }
     const handleAddBlogs = () => {
-        navigate('/postBlogs');
+        navigate('/blogs/postBlogs');
     }
     const handleViewBlogs = () => {
-        navigate('/allBlogs');
+        navigate('/blogs/allBlogs');
     }
 
     let content = null;

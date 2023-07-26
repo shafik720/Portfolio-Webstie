@@ -6,7 +6,6 @@ import './Modal.css';
 const Modal = () => {
     const { isOpen, closeModal, content } = useContext(ModalContext);
 
-    console.log(content);
     if (!isOpen) return null;
 
     return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmarkCircle, faBars } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +9,8 @@ import skillLogo from '../../Utilities/img/skill.png';
 import projectLogo from '../../Utilities/img/folder.png';
 
 import { Link, animateScroll as scroll } from "react-scroll";
+import { ModalContext } from '../../Utilities/Context Api/ModalContext';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -38,9 +40,18 @@ const Header = () => {
         document.querySelector('.header-div').classList.remove('mobile');
         document.querySelector('.header-div').classList.remove('active');
     }
+
+    // --- changing navbar according to the address
+    const {changeNavbar, isBlog} = useContext(ModalContext);
+
+    if(window.location.href.includes('blogs/')){
+        changeNavbar(true);
+    }else{
+        changeNavbar(false);
+    }
     return (
         <div className="">
-            <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className="header-div">
+            <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className={`header-div ${isBlog && 'vanished'}`}>
                 <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
                     <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
                     <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
@@ -56,7 +67,7 @@ const Header = () => {
                         onClick={moveAllClass}
                     >
                         <img src={homeLogo} alt="" />
-                        <p className="logo-text">Home</p>
+                        <p className="logo-text" >Home</p>
                     </Link>
                 </div>
                 <div draggable className="logo-icon">

@@ -57,3 +57,12 @@
     margin:  50px auto;
   }
 }
+
+
+/* --- Sub Menu --- */
+.sub-menu{
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  
+}

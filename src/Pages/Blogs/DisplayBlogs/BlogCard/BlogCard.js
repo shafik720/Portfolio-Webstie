@@ -13,6 +13,7 @@ const BlogCard = ({index}) => {
     const shortDesc = textFromContent.split("").slice(0,150).join("");
     // console.log(content);
 
+    // --- using context to open popup display or modal 
     const {openModal} = useContext(ModalContext) ; 
     const handleModal = () => {
         openModal({desc : content, title});
