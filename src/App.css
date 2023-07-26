@@ -64,7 +64,14 @@
   position: fixed;
   right: 5%;
   bottom: 5%;
-
+  /* border: 2px solid ; */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  padding: 20px;
+}
+.sub-menu:hover{
+  width: 200px;
 }
 .sub-menu img{
   width: 50px;
@@ -75,13 +82,21 @@ position: absolute;
 bottom: 0;
 right: 0;
 transition: all 0.5s ease;
+/* display: none; */
 }
 .sub-menu-active{
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .sub-menu:hover .sub-menu-front{
   transform: rotate(360deg);
 }
 .sub-menu:hover .sub-menu-active{
   /* display: block !important; */
+  opacity: 1;
+  right: 200px;
 }
