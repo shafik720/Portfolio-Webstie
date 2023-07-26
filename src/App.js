@@ -5,6 +5,8 @@ import { RouterProvider } from 'react-router-dom';
 import Router from './Utilities/Router/Router';
 import { ToastContainer } from 'react-toastify';
 import Modal from './Utilities/Context Api/Modal';
+import catOne from '../src/assets/img/cat 1.png';
+import catTwo from '../src/assets/img/cat 2.png';
 
 function App() {
   return (
@@ -15,9 +17,16 @@ function App() {
       </div>
       <ToastContainer /> 
       <Modal></Modal>
+
       <div className="sub-menu">
-        <span>Menu Here</span>
+        <div>
+          <img className="sub-menu-front" src={catOne} alt="" />
+        </div>
+        <div>
+          <img  className="sub-menu-active" src={catTwo} alt="" />
+        </div>
       </div>
+
     </div>
   );
 }
