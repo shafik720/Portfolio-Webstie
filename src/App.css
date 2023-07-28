@@ -114,26 +114,31 @@ transition: all 0.5s ease;
   align-items: center;
   transition: all 0.3s ease;
   opacity: 0;
+  scale: 0;
+  transform-origin: right;
 }
+
+.sub-menu:hover .sub-menu-items{
+  opacity: 1;
+  transform-origin: right;
+  z-index: 20;
+  scale: 1 ;
+}
+
 .sub-menu-items a{
   text-decoration: none;
   color: crimson;
   padding-right: 10px;
   margin-right: 10px;
-  font-weight: 500;
+  font-weight: 700;
   /* padding: 5px 20px; */
-  border-right: 3px solid crimson;
+  border-right: 3px solid black;
   line-height: 18px;
   font-size: 22px;
 }
 .sub-menu-items a:last-child{
   border: none;
-  margin-right: 0px;
-}
-.sub-menu:hover .sub-menu-items{
-  opacity: 1;
-  transform-origin: left;
-  z-index: 20;
+  margin-right: 10px;
 }
 
 .horizontal {
