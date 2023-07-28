@@ -25,6 +25,11 @@ function App() {
         <div>
           <img  className="sub-menu-active" src={catTwo} alt="" />
         </div>
+        <div className="sub-menu-items">
+          <a href="">Home</a>
+          <a href="">Blogs</a>
+        </div>
+        <div className='horizontal'/>
       </div>
 
     </div>
