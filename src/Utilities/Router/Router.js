@@ -5,27 +5,34 @@ import Blogs from '../../Pages/Blogs/Blogs';
 import Login from '../../Components/Login/Login';
 import Dashboard from '../../Components/Dashboard/Dashboard';
 import DisplayBlogs from '../../Pages/Blogs/DisplayBlogs/DisplayBlogs';
+import Main from '../../Main';
 
 const Router = createBrowserRouter([
     {
         path : '/',
-        element : <Home></Home>
-    },
-    {
-        path : 'blogs/postBlogs',
-        element : <Blogs></Blogs>
-    },
-    {
-        path : 'blogs/allBlogs',
-        element : <DisplayBlogs></DisplayBlogs>
-    },
-    {
-        path : '/adminDashboard',
-        element : <Dashboard></Dashboard>
-    },
-    {
-        path : '/adminLogin',
-        element : <Login></Login>
+        element : <Main></Main>,
+        children : [
+            {
+                path : '/',
+                element : <Home></Home>
+            },
+            {
+                path : 'blogs/postBlogs',
+                element : <Blogs></Blogs>
+            },
+            {
+                path : 'blogs/allBlogs',
+                element : <DisplayBlogs></DisplayBlogs>
+            },
+            {
+                path : '/adminDashboard',
+                element : <Dashboard></Dashboard>
+            },
+            {
+                path : '/adminLogin',
+                element : <Login></Login>
+            }
+        ]
     }
 ])
 export default Router;

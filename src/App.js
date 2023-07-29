@@ -12,15 +12,7 @@ function App() {
 
   return (
     <div>
-      <Header></Header>
-      <div className="main-div">
-        <RouterProvider router={Router}></RouterProvider>
-      </div>
-      <ToastContainer /> 
-      <Modal></Modal>
-    <Submenu></Submenu>
-
-
+      <RouterProvider router={Router}></RouterProvider>
     </div>
   );
 }

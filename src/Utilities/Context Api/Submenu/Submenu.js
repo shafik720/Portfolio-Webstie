@@ -1,9 +1,10 @@
 import React from 'react';
 import catOne from '../../../../src/assets/img/cat 1.png';
 import catTwo from '../../../../src/assets/img/cat 2.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Submenu = () => {
-    // const navigation = Navigate();
+    // const navigation = nav();
     const handleLink = (data) => {
 
     }
@@ -16,8 +17,8 @@ const Submenu = () => {
                 <img className="sub-menu-active" src={catTwo} alt="" />
             </div>
             <div className="sub-menu-items">
-                <a href="" onClick={() => handleLink('home')}>Home</a>
-                <a href="">Blogs</a>
+                <Link to="/" onClick={() => handleLink('home')}>Home</Link>
+                <Link to="/blogs/allBlogs">Blogs</Link>
             </div>
             <div className='horizontal' />
         </div>
