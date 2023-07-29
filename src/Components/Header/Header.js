@@ -61,7 +61,7 @@ const Header = () => {
                     </div>
                     <div draggable className="logo-icon">
                         <NavLink
-                            to="/blogs/react"
+                            to="/blogs/allBlogs"
                         >
                             <img src="https://i.ibb.co/1LMMKM7/all.png" alt="" />
                             <p className="logo-text" >All</p>
@@ -77,7 +77,7 @@ const Header = () => {
                     </div>
                     <div draggable className="logo-icon">
                         <NavLink
-                            to="/blogs/webDevelopment"
+                            to="/blogs/webBlogs"
                         >
                             <img src="https://i.ibb.co/b7YsSyw/world-wide-web.png" alt="" />
                             <p className="logo-text" >Web</p>

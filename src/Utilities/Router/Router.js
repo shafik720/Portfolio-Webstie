@@ -6,6 +6,8 @@ import Login from '../../Components/Login/Login';
 import Dashboard from '../../Components/Dashboard/Dashboard';
 import DisplayBlogs from '../../Pages/Blogs/DisplayBlogs/DisplayBlogs';
 import Main from '../../Main';
+import WebBlogs from '../../Pages/Blogs/BlogsPage/WebBlogs';
+import ProgrammingBlogs from '../../Pages/Blogs/BlogsPage/ProgrammingBlogs';
 
 const Router = createBrowserRouter([
     {
@@ -17,6 +19,15 @@ const Router = createBrowserRouter([
                 element : <Home></Home>
             },
             {
+                path : '/adminDashboard',
+                element : <Dashboard></Dashboard>
+            },
+            {
+                path : '/adminLogin',
+                element : <Login></Login>
+            },
+
+            {
                 path : 'blogs/postBlogs',
                 element : <Blogs></Blogs>
             },
@@ -25,12 +36,12 @@ const Router = createBrowserRouter([
                 element : <DisplayBlogs></DisplayBlogs>
             },
             {
-                path : '/adminDashboard',
-                element : <Dashboard></Dashboard>
+                path : 'blogs/programmingBlogs',
+                element : <ProgrammingBlogs></ProgrammingBlogs>
             },
             {
-                path : '/adminLogin',
-                element : <Login></Login>
+                path : 'blogs/WebBlogs',
+                element : <WebBlogs></WebBlogs>
             }
         ]
     }
