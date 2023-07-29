@@ -51,7 +51,10 @@ const Header = () => {
     }
     return (
         <div className="">
-            <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className={`header-div ${isBlog && 'vanished'}`}>
+            {isBlog ? 
+            <div></div> 
+            : 
+            <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className={`header-div`}>
                 <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
                     <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
                     <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
@@ -114,6 +117,7 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
+            }
         </div>
     );
 };
