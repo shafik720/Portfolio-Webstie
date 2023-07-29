@@ -10,7 +10,7 @@ import projectLogo from '../../Utilities/img/folder.png';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 import { ModalContext } from '../../Utilities/Context Api/ModalContext';
-import { useLocation } from 'react-router-dom';
+import { Link as Link2, NavLink, useLocation } from 'react-router-dom';
 
 
 
@@ -53,68 +53,51 @@ const Header = () => {
         <div className="">
             {isBlog ?
 
-            // --------------------- Blog Menu ------------------------------
+                // --------------------- Blog Menu ------------------------------
                 <div draggable onMouseEnter={moveHeader} onMouseLeave={moveHeader2} className={`header-div header-div-blog`}>
                     <div draggable onClick={() => setIsActive(!isActive)} className="menubar-mobile">
                         <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
                         <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
                     </div>
                     <div draggable className="logo-icon">
-                        <Link
-                            activeClass="active"
-                            to="banner"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={200}
-                            onClick={moveAllClass}
+                        <NavLink
+                            to="/blogs/react"
                         >
-                            <img src={homeLogo} alt="" />
-                            <p className="logo-text" >Home</p>
-                        </Link>
+                            <img src="https://i.ibb.co/1LMMKM7/all.png" alt="" />
+                            <p className="logo-text" >All</p>
+                        </NavLink>
                     </div>
                     <div draggable className="logo-icon">
-                        <Link
-                            activeClass="active"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={200}
-                            onClick={moveAllClass}
+                        <NavLink
+                            to="/blogs/react"
                         >
-                            <img src={userLogo} alt="" />
-                            <p className="logo-text">About</p>
-                        </Link>
+                            <img src="https://i.ibb.co/qnPG9fF/react.png" alt="" />
+                            <p className="logo-text" >React</p>
+                        </NavLink>
                     </div>
                     <div draggable className="logo-icon">
-                        <Link
-                            activeClass="active"
-                            to="skill"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={200}
-                            onClick={moveAllClass}
+                        <NavLink
+                            to="/blogs/webDevelopment"
                         >
-                            <img src={skillLogo} alt="" />
-                            <p className="logo-text">Skills</p>
-                        </Link>
-
+                            <img src="https://i.ibb.co/b7YsSyw/world-wide-web.png" alt="" />
+                            <p className="logo-text" >Web</p>
+                        </NavLink>
                     </div>
                     <div draggable className="logo-icon">
-                        <Link
-                            activeClass="active"
-                            to="projects"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={300}
-                            onClick={moveAllClass}
+                        <NavLink
+                            to="/blogs/webDevelopment"
                         >
-                            <img src={projectLogo} alt="" />
-                            <p className="logo-text">Projects</p>
-                        </Link>
+                            <img src="https://i.ibb.co/CMy7CZf/mac.png" alt="" />
+                            <p className="logo-text" >Mac</p>
+                        </NavLink>
+                    </div>
+                    <div draggable className="logo-icon">
+                        <NavLink
+                            to="/blogs/webDevelopment"
+                        >
+                            <img src="https://i.ibb.co/JsTcbXF/hacker.png" alt="" />
+                            <p className="logo-text" >Others</p>
+                        </NavLink>
                     </div>
                 </div>
                 :

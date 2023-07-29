@@ -89,6 +89,27 @@
     display: block;
 }
 
+
+/* ----------------------- Blog Menu ------------------------- */
+.header-div-blog{
+    background: #3f4e67;
+    width: 4rem;
+}
+/* .header-div-blog.active{
+    width: 400px;
+} */
+.header-div-blog .logo-icon img{
+    width: 35px;
+}
+.header-div-blog a{
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+.header-div-blog p {
+   /* margin-top: 5px; */
+}
+
 /* ------------------------------------------
 for mobile responsiveness 
 --------------------------------------------*/
@@ -113,8 +134,3 @@ for mobile responsiveness
 
 
 
-
-/* --- Blog Menu --- */
-.header-div-blog{
-    background: #83024f;
-}
