@@ -11,6 +11,8 @@ const DisplayBlogs = () => {
         const res =  await axios.get('https://server-for-my-portfolio.vercel.app/getAllBlogs');
         if(res.data.length>0){
             setData(res.data);
+        }else{
+            setData(false);
         }
     };
     useEffect(()=>{
@@ -22,7 +24,8 @@ const DisplayBlogs = () => {
         <div className='blog-div'>
             {/* <p>Total Blog Found : {data.length}</p> */}
             {data.map(index=><BlogCard index={index} key={index._id}></BlogCard>)}
-            {data.length===0 && <p>No Blogs Found !</p>}
+            {data.length===0 && <p>Loading...</p>}
+            {!data && <p>No Blogs Found !</p>}
         </div>
     );
 };
