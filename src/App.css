@@ -69,9 +69,19 @@
   height: 50px;
   cursor: pointer;
   padding: 20px;
+  border-left: 3px solid #9ba6ba;   /* #02af80 Green color */
+  border-top: 3px solid  #9ba6ba;
+  padding-top: 50px;
+  padding-left: 50px;
+  border-radius: 50%;
+  /* transition: all 0.3s ease; */
 }
 .sub-menu:hover{
-  width: 200px;
+  width: 200px;  
+  border-left: 0;
+  border-top: 0;
+  padding-top: 50px;
+  padding-left: 50px;
 }
 .sub-menu img{
   width: 50px;
@@ -143,7 +153,7 @@ transition: all 0.5s ease;
 
 .horizontal {
   border: 1px solid;
-  margin-top: 35px;
+  margin-top: 30px;
   width: 0;
   transition: all 0.3s ease;
   transform-origin: right;
