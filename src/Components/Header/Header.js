@@ -59,6 +59,7 @@ const Header = () => {
                         <span className="menu-open"><FontAwesomeIcon icon={faBars} /></span>
                         <span className="menu-close"><FontAwesomeIcon icon={faXmarkCircle} /></span>
                     </div>
+
                     <div draggable className="logo-icon">
                         <NavLink
                             to="/blogs/allBlogs"
@@ -67,14 +68,16 @@ const Header = () => {
                             <p className="logo-text" >All</p>
                         </NavLink>
                     </div>
+
                     <div draggable className="logo-icon">
                         <NavLink
-                            to="/blogs/react"
+                            to="/blogs/webBlogs/react"
                         >
                             <img src="https://i.ibb.co/qnPG9fF/react.png" alt="" />
                             <p className="logo-text" >React</p>
                         </NavLink>
                     </div>
+
                     <div draggable className="logo-icon">
                         <NavLink
                             to="/blogs/webBlogs"
@@ -83,6 +86,7 @@ const Header = () => {
                             <p className="logo-text" >Web</p>
                         </NavLink>
                     </div>
+
                     <div draggable className="logo-icon">
                         <NavLink
                             to="/blogs/webDevelopment"

@@ -40,7 +40,7 @@ const Router = createBrowserRouter([
                 element : <ProgrammingBlogs></ProgrammingBlogs>
             },
             {
-                path : 'blogs/WebBlogs',
+                path : 'blogs/WebBlogs/:category',
                 element : <WebBlogs></WebBlogs>
             }
         ]

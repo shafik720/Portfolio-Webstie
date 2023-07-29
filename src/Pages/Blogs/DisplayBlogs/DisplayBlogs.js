@@ -15,10 +15,11 @@ const DisplayBlogs = () => {
             setData(false);
         }
     };
+
     useEffect(()=>{
         response();
     },[])
-    // console.log(data);
+    console.log('all data: ', data);
 
     return (
         <div className='blog-div'>
