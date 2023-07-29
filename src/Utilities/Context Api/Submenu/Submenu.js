@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import catOne from '../../../../src/assets/img/cat 1.png';
 import catTwo from '../../../../src/assets/img/cat 2.png';
 import { Link, useNavigate } from 'react-router-dom';
+import { ModalContext } from '../ModalContext';
 
 const Submenu = () => {
     // const navigation = nav();
+    const {changeNavbar} = useContext(ModalContext)
     const handleLink = (data) => {
-
+        if(data === 'home'){
+            changeNavbar(false);
+        }else{
+            changeNavbar(true);
+        }
     }
     return (
         <div className="sub-menu">
@@ -18,7 +24,7 @@ const Submenu = () => {
             </div>
             <div className="sub-menu-items">
                 <Link to="/" onClick={() => handleLink('home')}>Home</Link>
-                <Link to="/blogs/allBlogs">Blogs</Link>
+                <Link to="/blogs/allBlogs" onClick={()=>handleLink('blogs')}>Blogs</Link>
             </div>
             <div className='horizontal' />
         </div>
