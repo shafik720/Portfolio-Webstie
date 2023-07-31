@@ -1,0 +1,23 @@
+.blog-div-parent {
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    /* background: royalblue; */
+}
+
+.blog-div-parent h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.blog-div-parent hr {
+    border: none;
+    border-top: 3px solid ;
+    margin-bottom: 50px;
+    width: 50%;
+    margin: auto;
+}
+
+.category-special-word{
+    font-weight: 700;
+    color: crimson;
+}

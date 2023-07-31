@@ -10,7 +10,6 @@ const ModalProvider = ({ children }) => {
     // --- for changing the navbar style when user is in blog page
     const [isBlog, setIsBlog] = useState(false); 
     const changeNavbar = (isTrue) => {
-        console.log('Clicked');
         setIsBlog(isTrue);
     }
 

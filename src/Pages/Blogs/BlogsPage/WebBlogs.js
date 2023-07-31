@@ -1,39 +1,57 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import BlogCard from '../DisplayBlogs/BlogCard/BlogCard';
+import './WebBlogs.css';
 
 const WebBlogs = () => {
     const params = useParams();
-    // const {category as paramCategory} = params ; 
+    // const {category as paramCategory} = params ;
 
     const [data, setData] = useState([]);
-
-    const response = async () => {
-        const res = await axios.get('https://server-for-my-portfolio.vercel.app/getAllBlogs');
-        if (res.data.length > 0) {
-            const dummy = [];
-            res.data.map(index => {
-                const obtainedData = index.category.find(index2 => index2 == params.category)
-                if (obtainedData) {
-                    // setData(dummy.push(index))
-                    dummy.push(index);
-                    setData(dummy);
-                }
-            });
-        } else {
-            setData(false);
-        }
-    };
+    const [catname, setCatname] = useState('');
 
     useEffect(() => {
-        response();
-    }, [])
-    console.log(data);
+        // --- fetching data from server
+        fetch(`http://localhost:2500/blogs/${params.category}`)
+            .then(res => res.json())
+            .then(data => setData(data))
+
+        // --- setting category name from params
+        if(params.category === 'dsa'){
+            setCatname('DSA')
+        }
+        else if(params.category === 'webDevelopment'){
+            setCatname('Web Development')
+        }
+        else if(params.category === 'react'){
+            setCatname('React')
+        }
+        else if(params.category === 'mac'){
+            setCatname('Mac')
+        }
+        else{
+            setCatname('');
+        }
+
+    }, [params.category, params])
+
+    console.log(params.category);
     return (
-        <div>
-            <h2>Show web blogs here</h2>
+        <div className="blog-div-parent">
+            <h1><span className='category-special-word'>{catname} </span> related Blogs </h1>
+            <hr />
+            <div className='blog-div'>
+                {/* <p>Total Blog Found : {data.length}</p> */}
+                {data.map(index => <BlogCard index={index} key={index._id}></BlogCard>)}
+                {data.length === 0 && <p>Loading...</p>}
+                {!data && <p>No Blogs Found !</p>}
+            </div>
         </div>
     );
 };
 
 export default WebBlogs;
+
+
+

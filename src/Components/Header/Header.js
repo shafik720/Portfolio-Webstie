@@ -10,7 +10,7 @@ import projectLogo from '../../Utilities/img/folder.png';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 import { ModalContext } from '../../Utilities/Context Api/ModalContext';
-import { Link as Link2, NavLink, useLocation } from 'react-router-dom';
+import { Link as Link2, NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 
 
@@ -49,6 +49,11 @@ const Header = () => {
     } else {
         changeNavbar(false);
     }
+    const navigation = useNavigate();
+    const goto = async(dummy) => {
+        navigation('/');
+        navigation(`blogs/webBlogs/${dummy}`)
+    }
     return (
         <div className="">
             {isBlog ?
@@ -61,47 +66,47 @@ const Header = () => {
                     </div>
 
                     <div draggable className="logo-icon">
-                        <NavLink
+                        <Link2
                             to="/blogs/allBlogs"
                         >
                             <img src="https://i.ibb.co/1LMMKM7/all.png" alt="" />
                             <p className="logo-text" >All</p>
-                        </NavLink>
+                        </Link2>
                     </div>
 
                     <div draggable className="logo-icon">
-                        <NavLink
+                        <Link2
                             to="/blogs/webBlogs/react"
                         >
                             <img src="https://i.ibb.co/qnPG9fF/react.png" alt="" />
                             <p className="logo-text" >React</p>
-                        </NavLink>
+                        </Link2>
                     </div>
 
                     <div draggable className="logo-icon">
-                        <NavLink
-                            to="/blogs/webBlogs"
+                        <Link2
+                            to="/blogs/webBlogs/webDevelopment"
                         >
                             <img src="https://i.ibb.co/b7YsSyw/world-wide-web.png" alt="" />
                             <p className="logo-text" >Web</p>
-                        </NavLink>
+                        </Link2>
                     </div>
 
                     <div draggable className="logo-icon">
-                        <NavLink
-                            to="/blogs/webDevelopment"
+                        <Link2
+                            to="/blogs/webBlogs/mac"
                         >
                             <img src="https://i.ibb.co/CMy7CZf/mac.png" alt="" />
                             <p className="logo-text" >Mac</p>
-                        </NavLink>
+                        </Link2>
                     </div>
                     <div draggable className="logo-icon">
-                        <NavLink
-                            to="/blogs/webDevelopment"
+                        <Link
+                            onClick={()=> goto('dsa')}
                         >
                             <img src="https://i.ibb.co/JsTcbXF/hacker.png" alt="" />
                             <p className="logo-text" >Others</p>
-                        </NavLink>
+                        </Link>
                     </div>
                 </div>
                 :
