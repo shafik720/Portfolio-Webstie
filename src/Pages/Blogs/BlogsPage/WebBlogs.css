@@ -1,7 +1,8 @@
 .blog-div-parent {
-    margin-left: 0.5rem;
-    margin-top: 2rem;
+    /* margin-left: 0.5rem;
+    margin-top: 2rem; */
     /* background: royalblue; */
+    margin: 2rem 1rem;
 }
 
 .blog-div-parent h1 {

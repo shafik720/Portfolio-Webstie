@@ -13,7 +13,7 @@ const WebBlogs = () => {
 
     useEffect(() => {
         // --- fetching data from server
-        fetch(`http://localhost:2500/blogs/${params.category}`)
+        fetch(`https://server-for-my-portfolio.vercel.app/blogs/${params.category}`)
             .then(res => res.json())
             .then(data => setData(data))
 
