@@ -36,7 +36,7 @@ const WebBlogs = () => {
 
     }, [params.category, params])
 
-    console.log(params.category);
+    // console.log(params.category);
     return (
         <div className="blog-div-parent">
             <h1><span className='category-special-word'>{catname} </span> related Blogs </h1>

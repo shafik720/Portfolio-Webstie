@@ -4,13 +4,14 @@ import { useContext } from 'react';
 import { ModalContext } from '../../../../Utilities/Context Api/ModalContext';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../Utilities/firebase.init';
+import { useNavigate, useNavigation } from 'react-router-dom';
 
 const BlogCard = ({ index }) => {
     const { _id, content, category, title } = index;
 
     // --- checking if the user is admin
     const [user, loading, error] = useAuthState(auth);
-    console.log(user?.email);
+    // console.log(user?.email);
 
     const tempContent = document.createElement('div');
     tempContent.innerHTML = content;
@@ -23,6 +24,12 @@ const BlogCard = ({ index }) => {
     const { openModal } = useContext(ModalContext);
     const handleModal = () => {
         openModal({ desc: content, title });
+    }
+
+    // --- go to the 'Edit Blog' page for a specific blog
+    const navigation = useNavigate();
+    const gotoEdit = (id) => {
+        navigation(`/blogs/editBlogs/${_id}`)
     }
     return ( 
         loading ? <p>Loading....</p> :
@@ -37,7 +44,7 @@ const BlogCard = ({ index }) => {
             <div className="blog-footer">
                 <p>12 January 2023</p>
                 {user?.email == 'shafikrasel5@gmail.com' && <div className="modify-button">
-                    <button>Edit</button>
+                    <button onClick={()=>gotoEdit(_id)}>Edit</button>
                     <button>Delete</button>
                 </div>}
             </div>

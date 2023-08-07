@@ -8,6 +8,7 @@ import DisplayBlogs from '../../Pages/Blogs/DisplayBlogs/DisplayBlogs';
 import Main from '../../Main';
 import WebBlogs from '../../Pages/Blogs/BlogsPage/WebBlogs';
 import ProgrammingBlogs from '../../Pages/Blogs/BlogsPage/ProgrammingBlogs';
+import EditBlog from '../../Pages/Blogs/EditBlog/EditBlog';
 
 const Router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const Router = createBrowserRouter([
             {
                 path : 'blogs/programmingBlogs',
                 element : <ProgrammingBlogs></ProgrammingBlogs>
+            },
+            {
+                path : 'blogs/editBlogs/:id',
+                element : <EditBlog></EditBlog>
             },
             {
                 path : 'blogs/WebBlogs/:category',
