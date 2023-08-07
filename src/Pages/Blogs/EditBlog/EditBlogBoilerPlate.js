@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { errorMsg } from '../../../Utilities/Popup Msg/errorMsg';
 import JoditEditor from 'jodit-react';
+import { successMsg } from '../../../Utilities/Popup Msg/successMsg';
 
 const EditBlogBoilerPlate = ({data}) => {
-    console.log(data);
+    // console.log(data);
     const editor = useRef(null);
     const [content, setContent] = useState(data.content);
     const [title, setTitle] = useState(data.title);
@@ -37,10 +38,10 @@ const EditBlogBoilerPlate = ({data}) => {
             if (selectedCheckboxes.length <= 0) {
                 errorMsg('You must select a Catagory !');
             } else {
-                let confirm = window.confirm('Post a new Blog ? ');
+                let confirm = window.confirm('Edit The Blog ? ');
                 if (confirm) {
-                    fetch('https://server-for-my-portfolio.vercel.app/postBlog', {
-                        method: 'POST',
+                    fetch(`http://localhost:2500/blogs/edit/${data._id}`, {
+                        method: 'PATCH',
                         headers: {
                             'Content-type': 'application/json'
                         },
@@ -48,8 +49,10 @@ const EditBlogBoilerPlate = ({data}) => {
                     })
                         .then(res => res.json())
                         .then(result => {
-                            if (result.insertedId) {
+                            console.log(result);
+                            if (result.modifiedCount>0) {
                                 setIsPosted(true);
+                                successMsg('Edited successfully !');
                             }
                         })
                         .catch(error => {
@@ -141,7 +144,7 @@ const EditBlogBoilerPlate = ({data}) => {
                     onChange={newContent => { }}
                 />
             </div>
-            <button onClick={handleSubmit} className={`post-button ${isPosted && 'posted'}`} disabled={isPosted}>{isPosted ? 'Posted' : 'Post Blog'}</button>
+            <button onClick={handleSubmit} className={`post-button`} >Edit Blog</button>
         </div>
         </div>
     );
