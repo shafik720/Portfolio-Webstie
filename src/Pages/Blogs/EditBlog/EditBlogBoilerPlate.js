@@ -1,27 +1,73 @@
 import React, { useRef, useState } from 'react';
+import { errorMsg } from '../../../Utilities/Popup Msg/errorMsg';
+import JoditEditor from 'jodit-react';
 
-const EditBlogBoilerPlate = (data) => {
+const EditBlogBoilerPlate = ({data}) => {
     console.log(data);
     const editor = useRef(null);
-    const [content, setContent] = useState('');
-    const [title, setTitle] = useState('');
+    const [content, setContent] = useState(data.content);
+    const [title, setTitle] = useState(data.title);
     const [isPosted, setIsPosted] = useState(false);
 
     // --- for checkbox 
     const [checkboxes, setCheckboxes] = useState({
-        programming: false,
-        mac: false,
-        webDevelopment: false,
-        dsa: false,
-        react: false
+        programming: data.category.find(index => index == 'programming'),
+        mac: data.category.find(index => index == 'mac'),
+        webDevelopment: data.category.find(index => index == 'webDevelopment'),
+        dsa: data.category.find(index => index == 'dsa'),
+        react: data.category.find(index => index == 'react')
 
     })
+
+    const handleCheckBoxChange = event => {
+        const { name, checked } = event.target;
+        setCheckboxes({ ...checkboxes, [name]: checked });
+    }
+
+    const handleSubmit = () => {
+        const selectedCheckboxes = Object.entries(checkboxes).filter(([name, isChecked]) => isChecked).map(([name]) => name);
+
+        const now = new Date();
+        const convertedDate = now.toISOString();
+        // console.log(moment(convertedDate).format('DD MMM YYYY'));
+
+        // Perform any necessary actions with the selected checkboxes array
+        if (title.length > 0) {
+            // console.log(selectedCheckboxes.length);
+            if (selectedCheckboxes.length <= 0) {
+                errorMsg('You must select a Catagory !');
+            } else {
+                let confirm = window.confirm('Post a new Blog ? ');
+                if (confirm) {
+                    fetch('https://server-for-my-portfolio.vercel.app/postBlog', {
+                        method: 'POST',
+                        headers: {
+                            'Content-type': 'application/json'
+                        },
+                        body: JSON.stringify({ content, category: selectedCheckboxes, title, createdAt : convertedDate })
+                    })
+                        .then(res => res.json())
+                        .then(result => {
+                            if (result.insertedId) {
+                                setIsPosted(true);
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            errorMsg('There was an server error posting the blog');
+                        })
+                }
+            }
+        } else {
+            errorMsg('You must enter a title');
+        }
+    }
     return (
         <div>
             <div className="writting-div">
             <div className="blog-title">
                 <p>Blog Title</p>
-                <input type="text" name="title" id="" onChange={e => setTitle(e.target.value)} />
+                <input type="text" name="title" id="" value={title} onChange={e => setTitle(e.target.value)} />
             </div>
 
             {/* ------------ Category Section Starts ------------- */}
