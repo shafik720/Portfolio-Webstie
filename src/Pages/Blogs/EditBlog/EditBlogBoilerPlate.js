@@ -40,7 +40,7 @@ const EditBlogBoilerPlate = ({data}) => {
             } else {
                 let confirm = window.confirm('Edit The Blog ? ');
                 if (confirm) {
-                    fetch(`http://localhost:2500/blogs/edit/${data._id}`, {
+                    fetch(`https://server-for-my-portfolio.vercel.app/blogs/edit/${data._id}`, {
                         method: 'PATCH',
                         headers: {
                             'Content-type': 'application/json'

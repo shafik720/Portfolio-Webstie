@@ -5,6 +5,8 @@ import { ModalContext } from '../../../../Utilities/Context Api/ModalContext';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../Utilities/firebase.init';
 import { useNavigate, useNavigation } from 'react-router-dom';
+import { successMsg } from '../../../../Utilities/Popup Msg/successMsg';
+import { errorMsg } from '../../../../Utilities/Popup Msg/errorMsg';
 
 const BlogCard = ({ index }) => {
     const { _id, content, category, title } = index;
@@ -31,6 +33,22 @@ const BlogCard = ({ index }) => {
     const gotoEdit = (id) => {
         navigation(`/blogs/editBlogs/${_id}`)
     }
+
+    // --- delete a Blog 
+    const deleteBlog = (id) => {
+        fetch(`https://server-for-my-portfolio.vercel.app/blogs/delete/${id}`,{
+            method : 'DELETE',
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.deletedCount>0){
+                successMsg('Deleted Successfully !');
+            }
+        })
+        .catch(err => {
+            errorMsg(err.message);
+        })
+    }
     return ( 
         loading ? <p>Loading....</p> :
         <div className='blog-card'>
@@ -45,7 +63,7 @@ const BlogCard = ({ index }) => {
                 <p>12 January 2023</p>
                 {user?.email == 'shafikrasel5@gmail.com' && <div className="modify-button">
                     <button onClick={()=>gotoEdit(_id)}>Edit</button>
-                    <button>Delete</button>
+                    <button onClick={()=>deleteBlog(_id)}>Delete</button>
                 </div>}
             </div>
             <div className="blog-style"></div>

@@ -17,7 +17,7 @@ const EditBlog = () => {
 
     // --- getting data for the Blogs to be edited
     useEffect(()=>{
-        fetch(`http://localhost:2500/blogs/editBlogs/${params.id}`)
+        fetch(`https://server-for-my-portfolio.vercel.app/blogs/editBlogs/${params.id}`)
         .then(res => res.json())
         .then(data => setContent(data))
         .catch(error => setError(error.message))
