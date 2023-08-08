@@ -22,3 +22,9 @@
     font-weight: 700;
     color: crimson;
 }
+
+.not-found{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
