@@ -10,8 +10,9 @@ const WebBlogs = () => {
 
     const [data, setData] = useState([]);
     const [catname, setCatname] = useState('');
+    const [search, setSearch] = useState('');
 
-    console.log(data);
+    console.log(search);
     useEffect(() => {
         // --- fetching data from server
         fetch(`https://server-for-my-portfolio.vercel.app/blogs/${params.category}`)
@@ -49,7 +50,7 @@ const WebBlogs = () => {
             <h1><span className='category-special-word'>{catname} </span> related Blogs </h1>
             <hr />
             <div className="search-div">
-                <input type="text" name="" id="" />
+                <input type="text" name="" id="" onKeyUp={(e)=>setSearch(e.target.value)} />
                 <button>Search</button>
             </div>
             <div className='blog-div'>
