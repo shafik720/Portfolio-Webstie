@@ -7,6 +7,25 @@ import moment from 'moment';
 const DisplayBlogs = () => {
     const [data, setData] = useState([]);
 
+
+    // --- search functionality
+    const [search, setSearch] = useState('');
+    const [searchData, setSearchData] = useState([]);
+    useEffect(() => {
+        if (search !== '') {
+            const result = [];
+            data?.map(index => {
+                if (index.title.toLowerCase().includes(search.toLowerCase())) {
+                    // console.log('Got ya');
+                    result.push(index);
+                } else {
+                    // console.log('Not found');
+                }
+            })
+            setSearchData(result);
+        }
+    }, [search])
+
     const response = async () => {
         const res = await axios.get('https://server-for-my-portfolio.vercel.app/getAllBlogs');
         if (res.data.length > 0) {
@@ -25,9 +44,16 @@ const DisplayBlogs = () => {
         <div className="blog-div-parent">
             <h1>All Blogs</h1>
             <hr />
+
+            {/* --- search div --- */}
+            <div className="search-div">
+                <input type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                {/* <button>Search</button> */}
+            </div>
+
             <div className='blog-div'>
                 {/* <p>Total Blog Found : {data.length}</p> */}
-                {data.map(index => <BlogCard index={index} key={index._id}></BlogCard>)}
+                {search === '' ? data?.map(index => <BlogCard index={index} key={index._id}></BlogCard>) : searchData?.map(index => <BlogCard index={index} key={index._id}></BlogCard>)}
                 {data.length === 0 && <p>Loading...</p>}
                 {!data && <p>No Blogs Found !</p>}
             </div>
