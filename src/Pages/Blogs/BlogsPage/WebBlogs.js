@@ -48,6 +48,10 @@ const WebBlogs = () => {
         <div className="blog-div-parent">
             <h1><span className='category-special-word'>{catname} </span> related Blogs </h1>
             <hr />
+            <div className="search-div">
+                <input type="text" name="" id="" />
+                <button>Search</button>
+            </div>
             <div className='blog-div'>
                 {/* <p>Total Blog Found : {data.length}</p> */}
                 {data?.map(index => <BlogCard index={index} key={index._id}></BlogCard>)}
