@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './DisplayBlogs.css';
 import axios from 'axios';
 import BlogCard from './BlogCard/BlogCard';
-import moment from 'moment';
+import searchImg from '../../../assets/img/search.png'
 
 const DisplayBlogs = () => {
     const [data, setData] = useState([]);
@@ -47,7 +47,10 @@ const DisplayBlogs = () => {
 
             {/* --- search div --- */}
             <div className="search-div">
-                <input type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                <div className="search-img">
+                    <img src={searchImg} alt="" />
+                </div>
+                <input className='search-input' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
                 {/* <button>Search</button> */}
             </div>
 
