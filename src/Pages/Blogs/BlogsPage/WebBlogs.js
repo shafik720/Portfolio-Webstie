@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BlogCard from '../DisplayBlogs/BlogCard/BlogCard';
 import './WebBlogs.css';
+import searchImg from '../../../assets/img/search.png'
 
 const WebBlogs = () => {
     const params = useParams();
@@ -67,6 +68,9 @@ const WebBlogs = () => {
             <hr />
             {/* --- search div --- */}
             <div className="search-div">
+                <div className="search-img">
+                    <img src={searchImg} alt="" />
+                </div>
                 <input type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here'  />
                 {/* <button>Search</button> */}
             </div>
