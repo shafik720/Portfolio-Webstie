@@ -1,7 +1,7 @@
 
 .blog-div{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr) !important;
     margin: 50px 40px;
     z-index: 50;
     gap: 50px;

@@ -1,5 +1,5 @@
 import JoditEditor from 'jodit-react';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Blogs.css';
 import { errorMsg } from '../../Utilities/Popup Msg/errorMsg';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -8,8 +8,13 @@ import { useNavigate } from 'react-router-dom';
 
 const Blogs = () => {
     const editor = useRef(null);
+
     const [content, setContent] = useState('');
+    const [banglaContent, setBanglaContent] = useState('');
+
     const [title, setTitle] = useState('');
+    const [banglaTitle, setBanglaTitle] = useState('');
+
     const [isPosted, setIsPosted] = useState(false);
 
     // --- for checkbox 
@@ -47,7 +52,7 @@ const Blogs = () => {
                         headers: {
                             'Content-type': 'application/json'
                         },
-                        body: JSON.stringify({ content, category: selectedCheckboxes, title, createdAt : convertedDate })
+                        body: JSON.stringify({ content, banglaContent, category: selectedCheckboxes, title, banglaTitle, createdAt : convertedDate })
                     })
                         .then(res => res.json())
                         .then(result => {
@@ -86,9 +91,17 @@ const Blogs = () => {
     }
     if (user?.email === 'shafikrasel5@gmail.com') {
         content2 = <div className="writting-div">
+
+            {/* --- English Title --- */}
             <div className="blog-title">
-                <p>Blog Title</p>
+                <p>English Title</p>
                 <input type="text" name="title" id="" onChange={e => setTitle(e.target.value)} />
+            </div>
+
+            {/* --- Bangla Title --- */}
+            <div className="blog-title">
+                <p>Bangla Title</p>
+                <input type="text" name="title" id="" onChange={e => setBanglaTitle(e.target.value)} />
             </div>
 
             {/* ------------ Category Section Starts ------------- */}
@@ -152,8 +165,10 @@ const Blogs = () => {
             </div>
             {/* ------------ Category Section Ends ------------- */}
 
+
+            {/* ------------ English Description ------------- */}
             <div className="blog-details">
-                <p>Blog Details</p>
+                <p>Blog Details : English</p>
                 <JoditEditor
                     ref={editor}
                     value={content}
@@ -162,6 +177,19 @@ const Blogs = () => {
                     onChange={newContent => { }}
                 />
             </div>
+
+            {/* ------------ Bangla Description ------------- */}
+            <div className="blog-details">
+                <p>Blog Details : Bangla</p>
+                <JoditEditor
+                    ref={editor}
+                    value={content}
+                    tabIndex={1} // tabIndex of textarea
+                    onBlur={newContent => setBanglaContent(newContent)} // preferred to use only this option to update the content for performance reasons
+                    onChange={newContent => { }}
+                />
+            </div>
+
             <button onClick={handleSubmit} className={`post-button ${isPosted && 'posted'}`} disabled={isPosted}>{isPosted ? 'Posted' : 'Post Blog'}</button>
         </div>
     } else {
