@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './TranslationButton.css';
+import { ModalContext } from '../Context Api/ModalContext';
 
 const TranslationButton = () => {
-    const [bangla, setBangla] = useState(false);
-    const [english, setEnglish] = useState(true);
-
-    function setButtonStatusBangla(){
-        setBangla(true);
-        setEnglish(false);
-    }
-    function setButtonStatusEnglish(){
-        setEnglish(true);
-        setBangla(false);
-    }
+    const {bangla, english, setButtonStatusBangla, setButtonStatusEnglish} = useContext(ModalContext)
     // console.log(bangla);
     return (
         <div className='translate-button'>

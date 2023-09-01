@@ -22,8 +22,22 @@ const ModalProvider = ({ children }) => {
         setContent(null);
         setIsopen(false);
     }
+
+    // --- setting English-Bangla Translation button in blog page    
+    const [bangla, setBangla] = useState(false);
+    const [english, setEnglish] = useState(true);
+
+    function setButtonStatusBangla(){
+        setBangla(true);
+        setEnglish(false);
+    }
+    function setButtonStatusEnglish(){
+        setEnglish(true);
+        setBangla(false);
+    }
+
     return (
-        <ModalContext.Provider value={{ isOpen, openModal, closeModal, content, isBlog, changeNavbar }}>
+        <ModalContext.Provider value={{ isOpen, openModal, closeModal, content, isBlog, changeNavbar, bangla, english, setButtonStatusBangla, setButtonStatusEnglish }}>
             {children}
         </ModalContext.Provider>
     )

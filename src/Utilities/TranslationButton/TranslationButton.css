@@ -12,6 +12,8 @@
   font-weight: 600;
   font-size: 23px;
   transition: all 0.2s ease;
+  /* border:  1px solid ; */
+  outline: none;
 }
 .english-button{
   border-right: none;
