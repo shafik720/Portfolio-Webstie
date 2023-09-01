@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './BlogCard.css';
 import { useContext } from 'react';
 import { ModalContext } from '../../../../Utilities/Context Api/ModalContext';
@@ -9,18 +9,35 @@ import { successMsg } from '../../../../Utilities/Popup Msg/successMsg';
 import { errorMsg } from '../../../../Utilities/Popup Msg/errorMsg';
 
 const BlogCard = ({ index }) => {
-    const { _id, content, category, title } = index;
+    const { _id, content, category, title, banglaTitle, banglaContent } = index;
+    // console.log(index);
 
     // --- checking if the user is admin
     const [user, loading, error] = useAuthState(auth);
     // console.log(user?.email);
 
-    const tempContent = document.createElement('div');
+    // --- making short description from the whole description
+    const tempContent = document.createElement('div'); // --- for english
     tempContent.innerHTML = content;
     const textFromContent = tempContent.textContent;
 
-    const shortDesc = textFromContent.split("").slice(0, 150).join("");
-    // console.log(content);
+    const tempContent2 = document.createElement('div'); // --- for bangla
+    tempContent2.innerHTML = banglaContent;
+    const textFromContentBangla = tempContent2.textContent;
+
+    const [shortDescription, setShortDescription] = useState('')
+    const [shortDescription2, setShortDescription2] = useState('')
+    useEffect(()=>{
+        setShortDescription(textFromContent.split("").slice(0, 150).join(""));
+        if(banglaTitle){
+            setShortDescription2(textFromContentBangla.split("").slice(0, 150).join(""));
+        }else{
+            setShortDescription2(setShortDescription(textFromContent.split("").slice(0, 150).join("")))
+        }
+    },[]);
+    // let shortDesc = textFromContent.split("").slice(0, 150).join("");
+    // let shortDesc2 = textFromContentBangla.split("").slice(0, 150).join("");
+    
 
     // --- using context to open popup display or modal 
     const { openModal } = useContext(ModalContext);
@@ -49,14 +66,20 @@ const BlogCard = ({ index }) => {
             errorMsg(err.message);
         })
     }
+
+    // ------ English-Bangla Translation Process
+
+    // --- Checking if the translation state in Context Api is in Bangla or in English
+    const{bangla, english} = useContext(ModalContext);
+
     return ( 
         loading ? <p>Loading....</p> :
         <div className='blog-card'>
             <div className="blog-title">
-                <h5>{title}</h5>
+                <h5>{ bangla ? (banglaTitle || title) : title }</h5>
             </div>
             <div className="blog-details">
-                <p>{shortDesc}  . . . . .
+                <p>{bangla ? (shortDescription2 || shortDescription) : shortDescription}  . . . . .
                     <button onClick={handleModal}>Read More</button></p>
             </div>
             <div className="blog-footer">
