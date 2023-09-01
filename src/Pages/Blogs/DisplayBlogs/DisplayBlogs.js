@@ -3,6 +3,7 @@ import './DisplayBlogs.css';
 import axios from 'axios';
 import BlogCard from './BlogCard/BlogCard';
 import searchImg from '../../../assets/img/search.png'
+import TranslationButton from '../../../Utilities/TranslationButton/TranslationButton';
 
 const DisplayBlogs = () => {
     const [data, setData] = useState([]);
@@ -45,14 +46,15 @@ const DisplayBlogs = () => {
             <h1>All Blogs</h1>
             <hr />
 
+            <TranslationButton></TranslationButton>
+
             {/* --- search div --- */}
-            <div className="search-div">
+            {/* <div className="search-div">
                 <div className="search-img">
                     <img src={searchImg} alt="" />
                 </div>
                 <input className='search-input' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
-                {/* <button>Search</button> */}
-            </div>
+            </div> */}
 
             <div className='blog-div'>
                 {/* <p>Total Blog Found : {data.length}</p> */}

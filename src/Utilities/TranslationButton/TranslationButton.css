@@ -1,0 +1,28 @@
+.translate-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 150px;
+}
+
+.translate-button button {
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  font-weight: 600;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+.english-button{
+  border-right: none;
+}
+
+.bangla-button.active {
+  background: royalblue;
+  color: white;
+}
+
+.english-button.active {
+  background: royalblue;
+  color: white;
+}
