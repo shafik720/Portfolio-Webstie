@@ -49,12 +49,13 @@ const DisplayBlogs = () => {
             <TranslationButton></TranslationButton>
 
             {/* --- search div --- */}
-            {/* <div className="search-div">
+            <div className="search-div">
                 <div className="search-img">
                     <img src={searchImg} alt="" />
                 </div>
-                <input className='search-input' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
-            </div> */}
+                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                {/* <button>Search</button> */}
+            </div>
 
             <div className='blog-div'>
                 {/* <p>Total Blog Found : {data.length}</p> */}

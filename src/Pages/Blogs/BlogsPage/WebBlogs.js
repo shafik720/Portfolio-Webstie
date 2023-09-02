@@ -72,7 +72,7 @@ const WebBlogs = () => {
                 <div className="search-img">
                     <img src={searchImg} alt="" />
                 </div>
-                <input type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
                 {/* <button>Search</button> */}
             </div>
 
