@@ -9,7 +9,7 @@ import { successMsg } from '../../../../Utilities/Popup Msg/successMsg';
 import { errorMsg } from '../../../../Utilities/Popup Msg/errorMsg';
 
 const BlogCard = ({ index }) => {
-    const { _id, content, category, title, banglaTitle, banglaContent } = index;
+    const { _id, content, category, title, banglaTitle, banglaContent, titleThumb } = index;
 
     // --- checking if the user is admin
     const [user, loading, error] = useAuthState(auth);
@@ -26,17 +26,17 @@ const BlogCard = ({ index }) => {
 
     const [shortDescription, setShortDescription] = useState('')
     const [shortDescription2, setShortDescription2] = useState('')
-    useEffect(()=>{
+    useEffect(() => {
         setShortDescription(textFromContent.split("").slice(0, 150).join(""));
-        if(banglaTitle){
+        if (banglaTitle) {
             setShortDescription2(textFromContentBangla.split("").slice(0, 150).join(""));
-        }else{
+        } else {
             setShortDescription2(setShortDescription(textFromContent.split("").slice(0, 150).join("")))
         }
-    },[]);
+    }, []);
     // let shortDesc = textFromContent.split("").slice(0, 150).join("");
     // let shortDesc2 = textFromContentBangla.split("").slice(0, 150).join("");
-    
+
 
     // --- using context to open popup display or modal 
     const { openModal } = useContext(ModalContext);
@@ -52,44 +52,47 @@ const BlogCard = ({ index }) => {
 
     // --- delete a Blog 
     const deleteBlog = (id) => {
-        fetch(`https://server-for-my-portfolio.vercel.app/blogs/delete/${id}`,{
-            method : 'DELETE',
+        fetch(`https://server-for-my-portfolio.vercel.app/blogs/delete/${id}`, {
+            method: 'DELETE',
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount>0){
-                successMsg('Deleted Successfully !');
-            }
-        })
-        .catch(err => {
-            errorMsg(err.message);
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    successMsg('Deleted Successfully !');
+                }
+            })
+            .catch(err => {
+                errorMsg(err.message);
+            })
     }
 
     // ------ English-Bangla Translation Process
     // --- Checking if the translation state in Context Api is in Bangla or in English
-    const{bangla, english} = useContext(ModalContext);
+    const { bangla, english } = useContext(ModalContext);
 
-    return ( 
+    return (
         loading ? <p>Loading....</p> :
-        <div className='blog-card'>
-            <div className="blog-title">
-                <h5>{ bangla ? (banglaTitle || title) : title }</h5>
-            </div>
-            <div className="blog-details">
-                <p>{bangla ? (shortDescription2 || shortDescription) : shortDescription}  . . . . .
-                    <button onClick={handleModal}>Read More</button></p>
-            </div>
-            <div className="blog-footer">
-                <p>12 January 2023</p>
-                {user?.email == 'shafikrasel5@gmail.com' && <div className="modify-button">
-                    <button onClick={()=>gotoEdit(_id)}>Edit</button>
-                    <button onClick={()=>deleteBlog(_id)}>Delete</button>
+            <div className='blog-card'>
+                {titleThumb && <div className="title-thumb">
+                    <img src={titleThumb} alt="" />
                 </div>}
-            </div>
-            <div className="blog-style"></div>
+                <div className="blog-title">
+                    <h5>{bangla ? (banglaTitle || title) : title}</h5>
+                </div>
+                <div className="blog-details">
+                    <p>{bangla ? (shortDescription2 || shortDescription) : shortDescription}  . . . . .
+                        <button onClick={handleModal}>Read More</button></p>
+                </div>
+                <div className="blog-footer">
+                    <p>12 January 2023</p>
+                    {user?.email == 'shafikrasel5@gmail.com' && <div className="modify-button">
+                        <button onClick={() => gotoEdit(_id)}>Edit</button>
+                        <button onClick={() => deleteBlog(_id)}>Delete</button>
+                    </div>}
+                </div>
+                <div className="blog-style"></div>
 
-        </div>
+            </div>
     );
 };
 

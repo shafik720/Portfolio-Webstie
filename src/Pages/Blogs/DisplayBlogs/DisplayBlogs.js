@@ -57,7 +57,7 @@ const DisplayBlogs = () => {
     useEffect(() => {
         response();
     }, [])
-    // console.log('all data: ', data);
+    console.log('all data: ', data);
 
     return (
         <div className="blog-div-parent">

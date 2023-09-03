@@ -15,6 +15,8 @@ const Blogs = () => {
     const [title, setTitle] = useState('');
     const [banglaTitle, setBanglaTitle] = useState('');
 
+    const [titleThumb, setTitleThumb] = useState(''); 
+
     const [isPosted, setIsPosted] = useState(false);
 
     // --- for checkbox 
@@ -52,7 +54,7 @@ const Blogs = () => {
                         headers: {
                             'Content-type': 'application/json'
                         },
-                        body: JSON.stringify({ content, banglaContent, category: selectedCheckboxes, title, banglaTitle, createdAt : convertedDate })
+                        body: JSON.stringify({ content, banglaContent, category: selectedCheckboxes, title, banglaTitle, titleThumb, createdAt : convertedDate })
                     })
                         .then(res => res.json())
                         .then(result => {
@@ -94,14 +96,20 @@ const Blogs = () => {
 
             {/* --- English Title --- */}
             <div className="blog-title">
-                <p>English Title</p>
+                <p><strong>English</strong> Title</p>
                 <input type="text" name="title" id="" onChange={e => setTitle(e.target.value)} />
             </div>
 
             {/* --- Bangla Title --- */}
             <div className="blog-title">
-                <p>Bangla Title</p>
+                <p> <strong>Bangla</strong>  Title</p>
                 <input type="text" name="title" id="" onChange={e => setBanglaTitle(e.target.value)} />
+            </div>
+
+            {/* --- Title Thumbnail --- */}
+            <div className="blog-title">
+                <p> Title Thumbnail</p>
+                <input type="text" name="title" id="" onChange={e => setTitleThumb(e.target.value)} />
             </div>
 
             {/* ------------ Category Section Starts ------------- */}
@@ -168,7 +176,7 @@ const Blogs = () => {
 
             {/* ------------ English Description ------------- */}
             <div className="blog-details">
-                <p>Blog Details : English</p>
+                <p>Blog Details : <strong>English</strong> </p>
                 <JoditEditor
                     ref={editor}
                     value={content}
@@ -180,7 +188,7 @@ const Blogs = () => {
 
             {/* ------------ Bangla Description ------------- */}
             <div className="blog-details">
-                <p>Blog Details : Bangla</p>
+                <p>Blog Details : <strong>Bangla</strong> </p>
                 <JoditEditor
                     ref={editor}
                     value={content}
