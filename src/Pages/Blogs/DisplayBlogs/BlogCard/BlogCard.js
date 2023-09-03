@@ -40,8 +40,9 @@ const BlogCard = ({ index }) => {
 
     // --- using context to open popup display or modal 
     const { openModal } = useContext(ModalContext);
-    const handleModal = () => {
-        openModal({ desc: content, title });
+    const handleReadMore = () => {
+        // openModal({ desc: content, title });
+        navigation(`/singleBlogDetails/${_id}`)
     }
 
     // --- go to the 'Edit Blog' page for a specific blog
@@ -73,15 +74,15 @@ const BlogCard = ({ index }) => {
     return (
         loading ? <p>Loading....</p> :
             <div className='blog-card'>
-                {titleThumb && <div className="title-thumb">
-                    <img src={titleThumb} alt="" />
-                </div>}
+                <div className="title-thumb">
+                    <img src={titleThumb ? titleThumb : 'https://i.ibb.co/3M9ygwN/wp8408521-cat-4k-wallpapers-1.jpg'} alt="" />
+                </div>
                 <div className="blog-title">
                     <h5>{bangla ? (banglaTitle || title) : title}</h5>
                 </div>
                 <div className="blog-details">
                     <p>{bangla ? (shortDescription2 || shortDescription) : shortDescription}  . . . . .
-                        <button onClick={handleModal}>Read More</button></p>
+                        <button onClick={handleReadMore}>Read More</button></p>
                 </div>
                 <div className="blog-footer">
                     <p>12 January 2023</p>

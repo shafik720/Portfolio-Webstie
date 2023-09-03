@@ -9,6 +9,7 @@ import Main from '../../Main';
 import WebBlogs from '../../Pages/Blogs/BlogsPage/WebBlogs';
 import ProgrammingBlogs from '../../Pages/Blogs/BlogsPage/ProgrammingBlogs';
 import EditBlog from '../../Pages/Blogs/EditBlog/EditBlog';
+import SingleBlogDetails from '../../Pages/Blogs/SingleBlogDetails/SingleBlogDetails';
 
 const Router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const Router = createBrowserRouter([
             {
                 path : 'blogs/editBlogs/:id',
                 element : <EditBlog></EditBlog>
+            },
+            {
+                path : 'singleBlogDetails/:id',
+                element : <SingleBlogDetails></SingleBlogDetails>
             },
             {
                 path : 'blogs/WebBlogs/:category',
