@@ -1,10 +1,11 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BlogCard from '../DisplayBlogs/BlogCard/BlogCard';
 import './WebBlogs.css';
 import searchImg from '../../../assets/img/search.png'
 import TranslationButton from '../../../Utilities/TranslationButton/TranslationButton';
+import { ModalContext } from '../../../Utilities/Context Api/ModalContext';
 
 const WebBlogs = () => {
     const params = useParams();
@@ -13,23 +14,39 @@ const WebBlogs = () => {
     const [data, setData] = useState([]);
     const [catname, setCatname] = useState('');
 
+    // ------ English-Bangla Translation Process
+    // --- Checking if the translation state in Context Api is in Bangla or in English
+    const{bangla, english} = useContext(ModalContext);
+
     // --- search functionality
     const [search, setSearch] = useState('');
     const [searchData, setSearchData] = useState([]);
     useEffect(() => {
         if (search !== '') {
             const result = [];
-            data?.map(index => {
-                if (index.title.toLowerCase().includes(search.toLowerCase())) {
-                    // console.log('Got ya');
-                    result.push(index);
-                } else {
-                    // console.log('Not found');
-                }
-            })
-            setSearchData(result);
+            if(english){
+                data?.map(index => {
+                    if (index.title.toLowerCase().includes(search.toLowerCase())) {
+                        // console.log('Got ya');
+                        result.push(index);
+                    } else {
+                        // console.log('Not found');
+                    }
+                })
+                setSearchData(result);
+            }else if(!english){
+                data?.map(index => {
+                    if (index.banglaTitle?.includes(search.toLowerCase())) {
+                        // console.log('Got ya');
+                        result.push(index);
+                    } else {
+                        // console.log('Not found');
+                    }
+                })
+                setSearchData(result);
+            }
         }
-    }, [search])
+    }, [search, english, bangla])
 
 
     useEffect(() => {
@@ -72,7 +89,7 @@ const WebBlogs = () => {
                 <div className="search-img">
                     <img src={searchImg} alt="" />
                 </div>
-                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search' />
                 {/* <button>Search</button> */}
             </div>
 

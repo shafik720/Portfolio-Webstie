@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './DisplayBlogs.css';
 import axios from 'axios';
 import BlogCard from './BlogCard/BlogCard';
 import searchImg from '../../../assets/img/search.png'
 import TranslationButton from '../../../Utilities/TranslationButton/TranslationButton';
+import { ModalContext } from '../../../Utilities/Context Api/ModalContext';
 
 const DisplayBlogs = () => {
     const [data, setData] = useState([]);
+
+    // ------ English-Bangla Translation Process
+    // --- Checking if the translation state in Context Api is in Bangla or in English
+    const{bangla, english} = useContext(ModalContext);
+    
 
 
     // --- search functionality
@@ -15,17 +21,29 @@ const DisplayBlogs = () => {
     useEffect(() => {
         if (search !== '') {
             const result = [];
-            data?.map(index => {
-                if (index.title.toLowerCase().includes(search.toLowerCase())) {
-                    // console.log('Got ya');
-                    result.push(index);
-                } else {
-                    // console.log('Not found');
-                }
-            })
-            setSearchData(result);
+            if(english){
+                data?.map(index => {
+                    if (index.title.toLowerCase().includes(search.toLowerCase())) {
+                        // console.log('Got ya');
+                        result.push(index);
+                    } else {
+                        // console.log('Not found');
+                    }
+                })
+                setSearchData(result);
+            }else if(!english){
+                data?.map(index => {
+                    if (index.banglaTitle?.includes(search.toLowerCase())) {
+                        // console.log('Got ya');
+                        result.push(index);
+                    } else {
+                        // console.log('Not found');
+                    }
+                })
+                setSearchData(result);
+            }
         }
-    }, [search])
+    }, [search, english, bangla])
 
     const response = async () => {
         const res = await axios.get('https://server-for-my-portfolio.vercel.app/getAllBlogs');
@@ -53,7 +71,7 @@ const DisplayBlogs = () => {
                 <div className="search-img">
                     <img src={searchImg} alt="" />
                 </div>
-                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search Here' />
+                <input className='search-input-field' type="text" name="" id="" onKeyUp={(e) => setSearch(e.target.value)} placeholder='Search' />
                 {/* <button>Search</button> */}
             </div>
 

@@ -68,7 +68,6 @@ const BlogCard = ({ index }) => {
     }
 
     // ------ English-Bangla Translation Process
-
     // --- Checking if the translation state in Context Api is in Bangla or in English
     const{bangla, english} = useContext(ModalContext);
 
