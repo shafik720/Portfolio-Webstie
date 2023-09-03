@@ -11,10 +11,17 @@ import projectLogo from '../../Utilities/img/folder.png';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { ModalContext } from '../../Utilities/Context Api/ModalContext';
 import { Link as Link2, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Utilities/firebase.init';
 
 
 
 const Header = () => {
+
+    // --- checking if the user is admin
+    const [user, loading, error] = useAuthState(auth);
+    // console.log(user?.email);
+
     const moveHeader = () => {
         document.querySelector('.header-div').classList.add('active');
         // document.querySelector('.logo-text').classList.add('active');
@@ -108,6 +115,15 @@ const Header = () => {
                             <p className="logo-text" >Others</p>
                         </Link>
                     </div>
+                    {/* --- Link to go admin panel --- */}
+                    {user?.email == 'shafikrasel5@gmail.com' && <div draggable className="logo-icon">
+                        <NavLink to='/adminLogin'
+                            
+                        >
+                            <img src="https://i.ibb.co/TK3Y1Rt/sign.png" alt="" />
+                            <p className="logo-text" >Admin</p>
+                        </NavLink>
+                    </div>}
                 </div>
                 :
                 // --------------------- Home Menu ------------------------------

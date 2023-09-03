@@ -10,7 +10,6 @@ import { errorMsg } from '../../../../Utilities/Popup Msg/errorMsg';
 
 const BlogCard = ({ index }) => {
     const { _id, content, category, title, banglaTitle, banglaContent } = index;
-    // console.log(index);
 
     // --- checking if the user is admin
     const [user, loading, error] = useAuthState(auth);
