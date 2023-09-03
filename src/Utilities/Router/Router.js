@@ -46,7 +46,7 @@ const Router = createBrowserRouter([
                 element : <EditBlog></EditBlog>
             },
             {
-                path : 'singleBlogDetails/:id',
+                path : 'blogs/singleBlogDetails/:id',
                 element : <SingleBlogDetails></SingleBlogDetails>
             },
             {

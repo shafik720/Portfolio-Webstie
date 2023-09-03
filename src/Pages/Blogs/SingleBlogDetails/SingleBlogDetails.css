@@ -1,0 +1,18 @@
+
+
+
+.single-blog-details-div{
+    padding: 2rem 5rem ;
+}
+.single-blog-details-div 
+.blog-img{
+    /* border: 2px solid red; */
+    text-align: center;
+    padding: 50px 0;
+    width: 70%;
+    margin: 0 auto;
+}
+.single-blog-details-div img{
+    width: 100%;
+    /* max-width: 400px; */
+}

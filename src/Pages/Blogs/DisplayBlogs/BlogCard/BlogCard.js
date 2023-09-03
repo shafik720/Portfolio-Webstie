@@ -42,7 +42,7 @@ const BlogCard = ({ index }) => {
     const { openModal } = useContext(ModalContext);
     const handleReadMore = () => {
         // openModal({ desc: content, title });
-        navigation(`/singleBlogDetails/${_id}`)
+        navigation(`/blogs/singleBlogDetails/${_id}`)
     }
 
     // --- go to the 'Edit Blog' page for a specific blog
