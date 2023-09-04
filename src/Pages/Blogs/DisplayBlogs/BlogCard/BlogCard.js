@@ -7,9 +7,12 @@ import auth from '../../../../Utilities/firebase.init';
 import { useNavigate, useNavigation } from 'react-router-dom';
 import { successMsg } from '../../../../Utilities/Popup Msg/successMsg';
 import { errorMsg } from '../../../../Utilities/Popup Msg/errorMsg';
+import moment from 'moment';
 
 const BlogCard = ({ index }) => {
-    const { _id, content, category, title, banglaTitle, banglaContent, titleThumb } = index;
+    const { _id, content, category, title, banglaTitle, banglaContent, titleThumb , createdAt} = index;
+    const timeOfCreation = moment(createdAt).format('DD MMM YYYY') ;
+    // console.log(moment(createdAt).format('DD MMM YYYY'));
 
     // --- checking if the user is admin
     const [user, loading, error] = useAuthState(auth);
@@ -85,7 +88,7 @@ const BlogCard = ({ index }) => {
                         <button onClick={handleReadMore}>Read More</button></p>
                 </div>
                 <div className="blog-footer">
-                    <p>12 January 2023</p>
+                    <p>{timeOfCreation}</p>
                     {user?.email == 'shafikrasel5@gmail.com' && <div className="modify-button">
                         <button onClick={() => gotoEdit(_id)}>Edit</button>
                         <button onClick={() => deleteBlog(_id)}>Delete</button>
