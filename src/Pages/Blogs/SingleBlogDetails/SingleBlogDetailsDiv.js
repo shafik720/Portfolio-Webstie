@@ -18,9 +18,10 @@ const SingleBlogDetailsDiv = (index) => {
             </div>
 
             <div className="blog-img">
-                <img src={titleThumb} alt="" />
+                {/* <img src={titleThumb} alt="" /> */}
             </div>
-            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            {!bangla ? <div dangerouslySetInnerHTML={{ __html: content }}></div> : <div dangerouslySetInnerHTML={{ __html: banglaContent }}></div>}
+            
         </div>
     );
 };
