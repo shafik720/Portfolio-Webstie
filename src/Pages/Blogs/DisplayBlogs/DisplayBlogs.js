@@ -11,8 +11,8 @@ const DisplayBlogs = () => {
 
     // ------ English-Bangla Translation Process
     // --- Checking if the translation state in Context Api is in Bangla or in English
-    const{bangla, english} = useContext(ModalContext);
-    
+    const { bangla, english } = useContext(ModalContext);
+
 
 
     // --- search functionality
@@ -21,7 +21,7 @@ const DisplayBlogs = () => {
     useEffect(() => {
         if (search !== '') {
             const result = [];
-            if(english){
+            if (english) {
                 data?.map(index => {
                     if (index.title.toLowerCase().includes(search.toLowerCase())) {
                         // console.log('Got ya');
@@ -31,7 +31,7 @@ const DisplayBlogs = () => {
                     }
                 })
                 setSearchData(result);
-            }else if(!english){
+            } else if (!english) {
                 data?.map(index => {
                     if (index.banglaTitle?.includes(search.toLowerCase())) {
                         // console.log('Got ya');
@@ -57,7 +57,20 @@ const DisplayBlogs = () => {
     useEffect(() => {
         response();
     }, [])
-    console.log('all data: ', data);
+
+    // --- This function will sort the data for showing the last added blog at first
+    const sortingByDate = (arr) => {
+        arr.sort((a, b) => {
+            const dateA = new Date(a.createdAt);
+            const dateB = new Date(b.createdAt);
+            return dateB - dateA;
+        })
+    }
+
+    useEffect(() => {
+        sortingByDate(data)
+    }, [data])
+    console.log(sortingByDate(data));
 
     return (
         <div className="blog-div-parent">
