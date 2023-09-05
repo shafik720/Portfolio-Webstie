@@ -6,12 +6,12 @@ import moment from 'moment';
 const SingleBlogDetailsDiv = (index) => {
     const data = index.index;
     const { content, banglaContent, title, banglaTitle, createdAt, titleThumb } = data;
-    const timeOfCreation = moment(createdAt).format('DD MMM YYYY') ;
+    const timeOfCreation = moment(createdAt).format('DD MMM YYYY');
 
 
     // --- checking if the bangla version is enabled or not
     const { bangla } = useContext(ModalContext);
-    
+
     return (
         <div className='single-blog-details-div'>
             <div className="blog-title">
@@ -22,13 +22,24 @@ const SingleBlogDetailsDiv = (index) => {
             <div className="blog-img">
                 {/* <img src={titleThumb} alt="" /> */}
             </div>
-            {!bangla ? <div dangerouslySetInnerHTML={{ __html: content }}></div> : <div dangerouslySetInnerHTML={{ __html: banglaContent }}></div>}
-            
-            
+            {!bangla ? <div className='single-blog-details-content' dangerouslySetInnerHTML={{ __html: content }}></div> : <div className='single-blog-details-content'  dangerouslySetInnerHTML={{ __html: banglaContent }}></div>}
+
+            {/* --- Footer Panel of single blog --- */}
+            <hr />
             <div className="authority">
-                <hr />
-                <p>Written By : <img src="https://i.ibb.co/J5bQFs4/1668538578655.png" alt="" />  Shafiqul Hasan Rasel</p>
-                <p>Created at : <span>{timeOfCreation} </span>  </p>
+                <div className="authority-subDiv author">
+                    <p>Written By : </p>
+                    <div className="author-img-parent">
+                        <div className='author-img'>
+                            <img src="https://i.ibb.co/J5bQFs4/1668538578655.png" alt="" />
+                        </div>
+                        <p>Shafiqul Hasan Rasel</p>
+                    </div>
+                </div>
+                <div className=" authority-subDiv creation-date">
+                    <p>Created at : </p>
+                    <p>{timeOfCreation} </p>
+                </div>
             </div>
         </div>
     );
