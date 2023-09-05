@@ -12,7 +12,7 @@
     color: #2A2A2A;
     font-weight: 700;
 }
-
+/* 
 
 .project-thumb{
     border: 5px solid #00AF80;
@@ -33,9 +33,6 @@
 .single-project-body:hover .project-desc{
     opacity: 0;
 }
-.project-thumb-img-parent{
-    /* overflow: scroll; */
-}
 .project-thumb-img{
     margin: auto;
     text-align: center;
@@ -44,5 +41,4 @@
     width: 80%;
     margin-top: 10px;
     margin-bottom: 40px;
-    /* border-radius: 10px 10px 0 0; */
-}
+} */

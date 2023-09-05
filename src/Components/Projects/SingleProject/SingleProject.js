@@ -46,13 +46,13 @@ const SingleProject = (props) => {
                                 <h2>{projectName}</h2>
                                 <p>{desc}</p>
                             </div>
-                            <div className="project-thumb">
+                            {/* <div className="project-thumb">
                                 <div className="project-thumb-img-parent">
                                     <div className="project-thumb-img">
                                         <img src={thumb} alt=""/>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
