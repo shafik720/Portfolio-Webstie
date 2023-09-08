@@ -191,7 +191,7 @@ const Blogs = () => {
                 <p>Blog Details : <strong>Bangla</strong> </p>
                 <JoditEditor
                     ref={editor}
-                    value={content}
+                    value={banglaContent}
                     tabIndex={1} // tabIndex of textarea
                     onBlur={newContent => setBanglaContent(newContent)} // preferred to use only this option to update the content for performance reasons
                     onChange={newContent => { }}
