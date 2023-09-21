@@ -6,6 +6,10 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Utilities/firebase.init';
 import { useNavigate } from 'react-router-dom';
 
+
+import SunEditor from 'suneditor-react';
+import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+
 const Blogs = () => {
     const editor = useRef(null);
 
@@ -177,25 +181,27 @@ const Blogs = () => {
             {/* ------------ English Description ------------- */}
             <div className="blog-details">
                 <p>Blog Details : <strong>English</strong> </p>
-                <JoditEditor
+                {/* <JoditEditor
                     ref={editor}
                     value={content}
                     tabIndex={1} // tabIndex of textarea
                     onBlur={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
                     onChange={newContent => { }}
-                />
+                /> */}
+                      <SunEditor  placeholder="Please type here..."  />
+
             </div>
 
             {/* ------------ Bangla Description ------------- */}
             <div className="blog-details">
                 <p>Blog Details : <strong>Bangla</strong> </p>
-                <JoditEditor
+                {/* <JoditEditor
                     ref={editor}
                     value={banglaContent}
                     tabIndex={1} // tabIndex of textarea
                     onBlur={newContent => setBanglaContent(newContent)} // preferred to use only this option to update the content for performance reasons
                     onChange={newContent => { }}
-                />
+                /> */}
             </div>
 
             <button onClick={handleSubmit} className={`post-button ${isPosted && 'posted'}`} disabled={isPosted}>{isPosted ? 'Posted' : 'Post Blog'}</button>

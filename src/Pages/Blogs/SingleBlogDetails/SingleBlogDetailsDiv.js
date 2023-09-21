@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ModalContext } from '../../../Utilities/Context Api/ModalContext';
 import TranslationButton from '../../../Utilities/TranslationButton/TranslationButton';
+import './SingleBlogDetails.css';
 import moment from 'moment';
 
 const SingleBlogDetailsDiv = (index) => {
