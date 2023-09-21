@@ -20,6 +20,9 @@
     /* border: 1px solid; */
     /* align-items: center; */
 }
+.blog-title h5 , .blog-details p{
+    font-family: 'Baloo Da 2', cursive !important;
+}
 .title-thumb img{
     width: 100%;
     margin-bottom: 30px;

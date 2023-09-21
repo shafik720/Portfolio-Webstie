@@ -4,6 +4,9 @@
 .single-blog-details-div{
     padding: 2rem 5rem ;
 }
+.single-blog-details-div h1{
+    font-family: 'Baloo Da 2', cursive !important;
+}
 .single-blog-details-div 
 .blog-img{
     text-align: center;
@@ -12,10 +15,12 @@
 }
 
 .single-blog-details-content p{
-    font-family: 'Signika', sans-serif !important;
+    font-family: 'Baloo Da 2', cursive !important;
     /* line-height: 5px !important; */
     /* border: 2px solid red; */
     width: 100% !important;
+    font-weight: 500 !important;
+    font-size: 28px !important;
   }
 
   .single-blog-details-content p img{
@@ -27,6 +32,7 @@
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
+    border-radius: 5px;
 }
 
 
